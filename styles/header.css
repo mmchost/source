@@ -1,0 +1,72 @@
+.header-menu
+{
+	display:inline-block;
+	background:#0074BB;	
+	text-align:center;
+}
+.header-logo
+{
+	height:64px;	
+	background:#0066A2;
+	vertical-align:middle;
+	outline:0px solid orange;
+	border-style:none;
+	pointer-events:none;
+}
+.header-logo:focus
+{
+  outline:0px solid orange;  
+}
+
+.header-cell
+{
+	display:table-cell;
+	text-align:center;
+	background:#0066A2;
+	width:512px;
+	min-width:312px;	
+	/*width:100%;*/
+	height:80px;
+}
+.header-cell a
+{
+	/*display:block;
+	width:100%;
+	height:100%;*/
+	/*background:orange; /*for testing only*/
+	outline:0px solid black;
+	/*vertical-align:middle;*/
+}
+
+@media screen and (max-width: 1300px)
+{
+	.header-cell
+	{
+		width:320px;		
+	}
+}
+
+@media screen and (max-width:990px)
+{
+	.header-cell
+	{
+		height:48px;
+		width:2000px;
+	}
+	.header-logo
+	{
+		height:48px;
+	}
+	.header
+	{
+		height:32px;
+	}
+	.header-menu
+	{
+		width:100%;
+	}
+	.header-menu-cell
+	{
+		width:2000px;
+	}
+}
