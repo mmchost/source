@@ -1,0 +1,40 @@
+.section-title
+{
+	color:#0074BB;
+	background:#E6E6E6;
+	font-size:24px;
+	padding:10px;
+	text-align:center;
+	border-style:solid;
+	border-width:1px 0px 1px 0px;
+	border-color:#fff;
+	text-decoration:none;
+}
+
+.section-title a
+{
+	color:#0074BB;	
+	text-decoration:none;
+}
+
+.section-title a:hover
+{
+	color:#0074BB;	
+	text-decoration:underline;
+}
+
+@media screen and (max-width:990px)
+{
+	.section-title
+	{
+		font-size:16px;
+	}
+}
+
+@media screen and (max-width:380px)
+{
+	.section-title	
+	{
+		font-size:12px;
+	}
+}
