@@ -1,0 +1,16 @@
+.label-invalid
+{
+	color:red;
+	font-size:12px;
+	display:none;
+}
+
+@media screen and (max-width:990px)
+{
+	/*
+	.label-invalid
+	{
+		font-size:11px;
+	}
+	*/
+}
