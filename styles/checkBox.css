@@ -1,0 +1,9 @@
+input[type=checkbox]
+{
+	cursor:pointer;
+	outline:0px none black;	
+}
+input[type=checkbox]:focus
+{
+	outline:0px none black;
+}
