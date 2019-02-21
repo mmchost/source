@@ -427,3 +427,18 @@ function Maximize()
         }
     }
 }
+
+function ChangeTheme()
+{
+	var body = document.getElementById("body");
+	var currentClass = body.className;
+	body.className = currentClass == "dark-theme" ? "light-theme" : "dark-theme";
+	
+	var imageName = currentClass == "dark-theme" ? "light-theme-icon.png" : "dark-theme-icon.png";
+	
+	var themeButton = document.getElementById("theme-button");
+	if (themeButton)
+	{
+		themeButton.innerHTML = "<a style='pointer-events:auto; float:right; margin-right:29px; margin-top:29px; display:block; width:22px; height:22px; background:url(" + imageName + "); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit; cursor:pointer;' onclick='ChangeTheme()'></a>";
+	}
+}
