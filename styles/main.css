@@ -1,0 +1,239 @@
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('OpenSans-Light-webfont.eot');
+    src: url('OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Light-webfont.woff2#open_sanslight') format('woff2'),
+         url('OpenSans-Light-webfont.woff#open_sanslight') format('woff'),
+         url('OpenSans-Light-webfont.ttf#open_sanslight') format('truetype'),
+         url('OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#header, #footer, #header-404
+{
+	position:fixed;
+	display:block;
+	width:100%;
+	background:#0074BB;
+	z-index:9;
+	color:#f2f2f2;	
+	border-style:solid;border-color:#fff;border-width:0px 0px 1px 0px;
+}
+#header, #header-404
+{
+	left:0px;
+	top:0px;
+	/*height:81px; /*1px for bottom border-separator*/
+}
+#footer{
+	bottom:0px;
+	height:81px; /*1px for bottom border-separator*/
+}
+
+body
+{
+	font-family:'open_sanslight';
+	color:#343434;	
+	font-size:16px;	
+	font-style:normal;
+	font-weight:300;
+}
+
+.highlight-text
+{
+	color:#0074BB;
+}
+
+.normal-fontsize
+{
+	font-size:16px;
+}
+
+.large-fontsize
+{
+	font-size:32px;
+}
+
+.huge-fontsize
+{
+	font-size:128px;
+}
+
+.message-content
+{
+	text-align:center;
+	width:100%;
+	background:#FFFFFF;
+	height:150px;
+	min-height:150px;
+	padding:16 16 16 16;	
+}
+
+.exams-content
+{
+	width:100%;
+	background:#F3F3F3;
+	border-style:solid;
+	border-width:0px;
+	border-color:blue;
+	border-collapse:collapse;
+	margin:0px;
+}
+.exams-type
+{
+	padding:8px;
+	font-size:24px;	
+	border-style:solid;
+	border-width:1px;	
+	border-color:#fff;
+	border-collapse:collapse;
+	text-align:center;
+	width:30%;
+	min-width:90px;
+	background:transparent;
+	/*word-wrap:break-word;*/
+}
+.exams-type:hover
+{
+	background:#E6E6E6;
+}
+.exams-name
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:#fff;
+	border-collapse:collapse;
+	padding-left:8px;
+	width:50%;
+	height:32px;
+}
+.exams-name:hover
+{
+	background:#E6E6E6;
+}
+.exams-price
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:#fff;
+	border-collapse:collapse;
+	padding-left:8px;
+	width:20%;
+	height:32px;
+	min-width:40px;	
+}
+.exams-price:hover
+{
+	background:#E6E6E6;
+}
+
+.news-content
+{
+	width:80%;
+	margin-top:50px;
+	margin-bottom:50px;
+}
+.news-cell
+{
+	border-style:none none solid none;
+	border-width:1px;	
+	border-color:#E6E6E6;
+	padding:10px;
+}
+.news-cell-date
+{
+	color:black;
+	text-decoration:none;
+	font-size:12px;
+}
+
+.text-content
+{
+	padding-left:150px;
+	padding-right:150px;
+	text-align:left;
+	padding-top:32px;
+	padding-bottom:32px;
+	background:white;
+}
+
+
+
+@media screen and (max-width:990px)
+{
+	body
+	{
+		font-size:12px;
+	}
+  
+	.normal-fontsize
+	{
+		font-size:12px;
+	}
+	
+	.large-fontsize
+	{
+		font-size:18px;
+	}
+	
+	.huge-fontsize
+	{
+		font-size:96px;
+	}
+	
+	.message-content
+	{
+		height:64px;
+		min-height:64px;
+	} 
+	
+	.exams-type
+	{
+		font-size:14px;
+	}
+	.exams-name
+	{
+		font-size:12px;
+		height:24px;
+	}
+  
+	.news-content
+	{	
+		width:90%;
+		margin-top:20px;
+		margin-bottom:20px;
+	}
+	.news-cell
+	{
+		padding:10px;
+	}
+	.news-cell-date
+	{
+		font-size:10px;
+	}
+	
+	.text-content
+	{
+		padding-left:50px;
+		padding-right:50px;
+	}
+}
+
+@media screen and (max-width:380px)
+{
+	.exams-type
+	{
+		font-size:12px;
+	}
+	.exams-name
+	{
+		font-size:12px;
+	}
+	
+	.text-content
+	{
+		padding-left:20px;
+		padding-right:20px;
+	}
+}
