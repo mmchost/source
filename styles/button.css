@@ -1,0 +1,201 @@
+.button
+{	
+	font-size:16px;
+	text-decoration:none;	
+	width:112px;
+	min-width:112px;
+	height:32px;
+	background:#0074BB;	
+	color:#fff;	
+	text-align:center;
+	vertical-align:middle;
+	border-radius:4px;
+	//font-weight:bold;
+	cursor:pointer;
+	border-style:solid;
+	border-width:0px;
+	border-color:#0074BB;
+	padding:0px;
+	//transition:0.3s;
+}
+.button:hover
+{
+	background:#0088D3;
+	//border-color:#0066A2;
+}
+.button:focus
+{
+  outline:0px solid orange;
+}
+.button:active
+{
+	outline:0px solid orange;
+	background:#0066A2;
+}
+
+.button-default
+{
+	display:cell;
+	font-size:16px;
+	color:white;
+	min-width:128px;
+	max-width:302px;
+	width:100%;
+	height:46px;
+	padding:0px;
+	font-family:open_sanslight;
+	cursor:pointer;	
+	background:#0074BB;
+	border:none;
+	border-radius:4px;
+	border-style:solid;
+	border-width:0px;
+	border-color:#0074BB;
+	padding:0px;
+	//transition:0.3s;
+}
+.button-default:hover
+{
+	//border-color:#0066A2;
+	background:#0088D3;
+}
+.button-default:focus
+{
+  outline:0px solid orange;
+}
+.button-default:active
+{
+	outline:0px solid orange;
+	background:#0066A2;
+}
+.button-default-disabled
+{
+	display:cell;
+	font-size:16px;	
+	min-width:128px;
+	max-width:302px;
+	width:100%;
+	height:46px;
+	padding:0px;
+	font-family:open_sanslight;	
+	border:none;
+	border-radius:4px;
+	background:#ccc;
+	color:#666666;
+	cursor:auto;
+}
+
+.button-delete
+{
+	display:block;	
+	color:#0074BB;	
+	/*height:46px;*/	
+	font-family:open_sanslight;
+	cursor:pointer;	
+	background:#FFFFFF;
+	border-style:none;
+	width:1px;
+	border-width:0px;	
+}
+.button-delete:hover
+{
+	color:red;
+}
+.button-delete:focus
+{
+	outline:0px solid orange;
+}
+.button-delete:disabled,
+.button-delete[disabled]
+{
+	/*border: 1px solid #999999;*/
+	background:#ccc;
+	color:#666666;
+	cursor:auto;
+}
+
+.button-numeric
+{
+	min-height:36px;
+	min-width:30px;
+	display:cell;
+	font-size:16px;	
+	padding:0px;	
+	font-family:open_sanslight;
+	cursor:pointer;	
+	background:white;
+	/*border-radius:4px;*/
+	border-style:solid;
+	border-width:1px;
+	border-color:#ccc;
+}
+.button-numeric:hover
+{
+	border-color:#0066A2;
+}
+.button-numeric:focus
+{
+  outline:0px solid orange;
+}
+.button-numeric:disabled,
+.button-numeric[disabled]
+{
+	/*border: 1px solid #999999;*/
+	background:#ccc;
+	color:#666666;
+	cursor:auto;
+}
+
+.maximize-button
+{
+	pointer-events:auto;
+	display:block;
+	float:right;
+	margin-right:11px;
+	margin-top:11px;
+	display:block;
+	width:34px;
+	height:26px;
+	background:url(../images/maximize-icon.png);
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	background-clip:border-box;
+	background-origin:padding-box;
+	background-position-x:center;
+	background-position-y:center;
+	background-size:10px;
+	box-sizing:inherit;
+	cursor:pointer;
+}
+.maximize-button:hover
+{
+	background-color:#0088D3;
+}
+.maximize-button:active
+{
+	background-color:#0066A2;
+}
+
+
+@media screen and (max-width:990px) 
+{
+	.button-default
+	{
+		font-size:14px;
+		max-width:272px;
+	}
+	
+	.button-default-disabled
+	{
+		font-size:14px;
+		max-width:272px;
+	}
+	
+	.button
+	{
+		font-size:12px;
+		width:72px;
+		min-width:72px;
+		height:24px;
+	}
+}
