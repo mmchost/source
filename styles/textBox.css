@@ -1,0 +1,97 @@
+.textarea
+{
+	border:1px solid #ccc;
+	border-radius:4px;
+	font-family:open_sanslight;
+	font-size:13px;
+	padding:10px;
+	width:535px; 	
+	max-width:535px;
+	min-width:535px;
+	height:80px;
+	min-height:80px;
+	max-height:180px;
+}
+.textarea:focus 
+{
+    border:1px solid #0074BB;
+}
+
+.textbox
+{
+	min-width:250px;
+    max-width:250px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    /*resize: vertical; /*for texarea only*/
+	font-family:open_sanslight;	
+}
+.textbox:focus 
+{
+    border:1px solid #0074BB;
+}
+
+.searchbox
+{
+	min-width:480px;
+    max-width:480px;
+    padding:10px 32px 10px 10px;
+    border:1px solid #ccc;
+    border-radius:4px;
+	font-family:open_sanslight;	
+}
+.searchbox:focus 
+{
+    border:1px solid #0074BB;
+}
+
+.textbox-numeric
+{
+	min-width:32px;
+	/*min-height:28px;*/
+    padding:0px;
+    border-style:none;
+	border-color:#ccc;
+	border-width:1px 0px 1px 0px;
+    /*border-radius:4px;*/
+	font-family:open_sanslight;
+	text-align:center;
+	font-size:16px;
+	color:#000;
+}
+
+.textbox-numeric:focus 
+{
+    border:1px solid #0074BB;
+}
+
+.textbox-numeric:disabled ,
+.textbox-numeric[disabled]
+{
+	background:#fff;
+	color:#000;
+}
+
+@media screen and (max-width:990px) 
+{
+	.textbox-numeric
+	{
+		font-size:12px;
+	}
+}
+
+@media screen and (max-width:640px)
+{
+	.searchbox
+	{
+		max-width:250px;
+		min-width:250px;
+	}
+
+	.textarea
+	{
+		min-width:250px;
+		max-width:250px;
+	}
+}
