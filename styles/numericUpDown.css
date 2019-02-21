@@ -1,0 +1,14 @@
+input[type=number]
+{
+	width:100%;
+    max-width:281px;	
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius: 4px;    
+	font-family:open_sanslight;	
+}
+
+input[type=number]:focus
+{
+    border:1px solid #0074BB;
+}
