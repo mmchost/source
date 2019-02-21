@@ -1,0 +1,38 @@
+.overlay 
+{
+    visibility:hidden;
+    position:fixed;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100%;
+    text-align:center;
+    z-index: 1000;
+	background:#E6E6E6;
+    background:rgba(0,0,0,0.5);
+	//-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#9F000000,endColorstr=#9F000000)";	 
+}
+
+.overlay-content 
+{	
+    width:480px;     
+    //background-color: #fff;    
+    text-align:center;
+	border:1px solid #0074BB;
+}
+
+@media screen and (max-width:990px)
+{
+	.overlay-content
+	{
+		width:320px;
+	}
+}
+
+@media screen and (max-width:380px)
+{
+	.overlay-content
+	{
+		width:280px;
+	}
+}
