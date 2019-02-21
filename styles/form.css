@@ -1,0 +1,46 @@
+.form-data
+{
+	display:table-cell;
+	padding:10px; 
+	vertical-align:middle;
+}
+
+.form-page
+{
+	display:none;
+	width:100%;	
+}
+
+.formTable
+{
+	width:auto;
+}
+
+.inputContainer
+{
+	display:inline-block;
+	padding:5px;
+	vertical-align:top;
+}
+
+.inputPlaceholder
+{
+	display:inline-block;
+	padding:5px;
+	width:250px;
+	padding:10px;
+	border:1px solid #ccc;
+	border-radius:4px;
+}
+
+@media screen and (max-width:990px) 
+{
+}
+
+@media screen and (max-width:640px)
+{
+	.formTable
+	{
+		width:1px;
+	}
+}
