@@ -1,0 +1,9 @@
+.tag
+{
+	position:absolute;
+	display:block; 
+	/*background:red; /*FOR TESTING PURPOSES ONLY*/
+	width:10px;
+	/*height:128px; /*IMPORTANT: IF THE INFO BAR IS DISABLED, THE TOP OF THE MAIN MENU MUST BE 80px, ELSE 128px */
+	/*margin-top:-128px; /*IMPORTANT: IF THE INFO BAR IS DISABLED, THE TOP OF THE MAIN MENU MUST BE -64px, ELSE -112px */
+}
