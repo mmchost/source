@@ -1,0 +1,11 @@
+.image-hlink
+{
+	border-style:none;
+}
+.image-hlink:hover
+{
+}
+.image-hlink:focus 
+{
+	outline: 0px solid orange;
+}
