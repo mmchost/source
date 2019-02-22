@@ -1,4 +1,4 @@
-.section-title
+.light-theme .section-title
 {
 	color:#0074BB;
 	background:#E6E6E6;
@@ -8,6 +8,19 @@
 	border-style:solid;
 	border-width:1px 0px 1px 0px;
 	border-color:#fff;
+	text-decoration:none;
+}
+
+.dark-theme .section-title
+{
+	color:#0074BB;
+	background:#404040;
+	font-size:24px;
+	padding:10px;
+	text-align:center;
+	border-style:solid;
+	border-width:1px 0px 1px 0px;
+	border-color:#343434;
 	text-decoration:none;
 }
 
@@ -25,7 +38,7 @@
 
 @media screen and (max-width:990px)
 {
-	.section-title
+	.light-theme .section-title, .dark-theme .section-title
 	{
 		font-size:16px;
 	}
@@ -33,7 +46,7 @@
 
 @media screen and (max-width:380px)
 {
-	.section-title	
+	.light-theme .section-title, .dark-theme .section-title
 	{
 		font-size:12px;
 	}
