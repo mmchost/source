@@ -225,7 +225,10 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"</td>" +
 				"</tr>" +
 				"</table>" +
-				"<div id='theme-button' style='position:absolute; width:100%; pointer-events:none; height:80px; margin-top:-80px;'><a id='maximizeButton' class='maximize-button' onclick='Maximize()'></a></div>" +
+				"<div class='theme-button-container'>" +
+				"<a id='maximizeButton' class='maximize-button' onclick='Maximize()'/>" +
+				"<a id='themeButton' class='theme-button-light' onclick='ChangeTheme()'/>" +
+				"</div>" +
 				"<!-- <![endif]-->";
 			}
 		}
@@ -435,10 +438,11 @@ function ChangeTheme()
 	body.className = currentClass == "dark-theme" ? "light-theme" : "dark-theme";
 	
 	var imageName = currentClass == "dark-theme" ? "light-theme-icon.png" : "dark-theme-icon.png";
+	var className = currentClass == "dark-theme" ? "theme-button-light" : "theme-button-dark";
 	
-	var themeButton = document.getElementById("theme-button");
+	var themeButton = document.getElementById("themeButton");
 	if (themeButton)
 	{
-		themeButton.innerHTML = "<a style='pointer-events:auto; float:right; margin-right:29px; margin-top:29px; display:block; width:22px; height:22px; background:url(" + imageName + "); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit; cursor:pointer;' onclick='ChangeTheme()'></a>";
+		themeButton.className = className;
 	}
 }
