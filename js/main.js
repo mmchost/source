@@ -24,6 +24,7 @@ function RefreshCartItemsCount()
 
 function Page_OnResize(imagesPath)
 {
+	/*
 	var banner = document.getElementById("banner");
 	
 	if (banner)
@@ -43,6 +44,7 @@ function Page_OnResize(imagesPath)
 			banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "banner/320L.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
 		}		
 	}
+	*/
 	RefreshPosition();
 }
 
