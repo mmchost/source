@@ -146,37 +146,6 @@
 	cursor:auto;
 }
 
-.maximize-button
-{
-	pointer-events:auto;
-	display:block;
-	float:right;
-	margin-right:11px;
-	margin-top:11px;
-	display:block;
-	width:34px;
-	height:26px;
-	background:url(../images/maximize-icon.png);
-	background-repeat:no-repeat;
-	background-attachment:scroll;
-	background-clip:border-box;
-	background-origin:padding-box;
-	background-position-x:center;
-	background-position-y:center;
-	background-size:10px;
-	box-sizing:inherit;
-	cursor:pointer;
-}
-.maximize-button:hover
-{
-	background-color:#0088D3;
-}
-.maximize-button:active
-{
-	background-color:#0066A2;
-}
-
-
 @media screen and (max-width:990px) 
 {
 	.button-default
