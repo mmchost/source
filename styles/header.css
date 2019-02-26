@@ -123,6 +123,7 @@
 	background-size:10px;
 	box-sizing:inherit;
 	cursor:pointer;
+	pointer-events:auto;
 }
 .maximize-button:hover
 {
