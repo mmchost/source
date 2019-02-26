@@ -167,11 +167,11 @@
 	}
 }
 
-@media screen and (max-width:380px)
+@media screen and (max-width:320px)
 {
 	.header-cell
 	{
 		text-align:left;
-		margin-left:10px;
+		padding-left:20px;
 	}
 }
