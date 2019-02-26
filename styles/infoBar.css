@@ -57,6 +57,8 @@
 .dark-theme .cookiesbar
 {
 	background:#4D4D4D;
+	color:#fff;
+	border-color:#404040;
 }
 
 @media screen and (max-width:990px)
