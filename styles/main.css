@@ -10,7 +10,7 @@
     font-style: normal;
 }
 
-#header, #footer, #header-404
+#header, #footer
 {
 	position:fixed;
 	display:block;
@@ -18,17 +18,23 @@
 	background:#0074BB;
 	z-index:9;
 	color:#f2f2f2;	
-	border-style:solid;border-color:#fff;border-width:0px 0px 1px 0px;
+	border-style:solid;
+	border-width:0px 0px 1px 0px;
 }
-#header, #header-404
+#header
 {
 	left:0px;
 	top:0px;
-	/*height:81px; /*1px for bottom border-separator*/
 }
-#footer{
-	bottom:0px;
-	height:81px; /*1px for bottom border-separator*/
+
+.light-theme, #header
+{
+	border-color:#fff;
+}
+
+.dark-theme, #header
+{
+	border-color:#343434;
 }
 
 body
