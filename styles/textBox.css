@@ -35,15 +35,20 @@
 .searchbox
 {
 	min-width:480px;
-    max-width:480px;
-    padding:10px 32px 10px 10px;
-    border:1px solid #ccc;
-    border-radius:4px;
+	max-width:480px;
+	padding:10px 32px 10px 10px;
+	border:1px solid #ccc;
+	border-radius:4px;
 	font-family:open_sanslight;	
 }
 .searchbox:focus 
 {
-    border:1px solid #0074BB;
+	border:1px solid #0074BB;
+}
+.dark-theme .searchbox
+{
+	background:#343434;
+	border:1px solid #4D4D4D;
 }
 
 .textbox-numeric
