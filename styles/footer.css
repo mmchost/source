@@ -83,7 +83,6 @@
 .footer-copyright
 {	
 	min-height:48px;
-	/*min-height:32px;*/
 	text-align:center;
 	font-size:14px;
 	background:#E6E6E6;
@@ -93,6 +92,11 @@
 	border-width:0px;
 	vertical-align:top;
 }
+.dark-theme .footer-copyright
+{
+	background:#404040;
+}
+
 .footer-menu a
 {
 	text-decoration:none;
