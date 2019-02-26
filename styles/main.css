@@ -27,12 +27,12 @@
 	top:0px;
 }
 
-.light-theme, #header
+.light-theme #header
 {
 	border-color:#fff;
 }
 
-.dark-theme, #header
+.dark-theme #header
 {
 	border-color:#343434;
 }
