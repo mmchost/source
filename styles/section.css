@@ -10,7 +10,6 @@
 	border-color:#fff;
 	text-decoration:none;
 }
-
 .dark-theme .section-title
 {
 	color:#0074BB;
@@ -23,17 +22,29 @@
 	border-color:#343434;
 	text-decoration:none;
 }
-
 .section-title a
 {
 	color:#0074BB;	
 	text-decoration:none;
 }
-
 .section-title a:hover
 {
 	color:#0074BB;	
 	text-decoration:underline;
+}
+
+.section-content
+{
+	text-align:center;
+	border-width:0px;
+}
+.light-theme .section-content
+{
+	background:#fff;
+}
+.dark-theme .section-content
+{
+	background:#4D4D4D;
 }
 
 @media screen and (max-width:990px)
