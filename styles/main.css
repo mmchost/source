@@ -124,18 +124,19 @@ body
 	width:30%;
 	min-width:90px;
 	background:transparent;
-}
-.light-theme .exams-type
-{
 	border-color:#fff;
 }
-.light-theme .exams-type:hover
+.exams-type:hover
 {
 	background:#E6E6E6;
 }
 .dark-theme .exams-type
 {
 	border-color:#4D4D4D;
+}
+.dark-theme .exams-type:hover
+{
+	background:#404040;
 }
 
 .exams-name
@@ -146,18 +147,19 @@ body
 	padding-left:8px;
 	width:50%;
 	height:32px;
-}
-.light-theme .exams-name
-{
 	border-color:#fff;
 }
-.light-theme .exams-name:hover
+.exams-name:hover
 {
 	background:#E6E6E6;
 }
 .dark-theme .exams-name
 {
 	border-color:#4D4D4D;
+}
+.dark-theme .exams-name:hover
+{
+	background:#404040;
 }
 
 .exams-price
@@ -169,18 +171,19 @@ body
 	width:20%;
 	height:32px;
 	min-width:40px;	
-}
-.light-theme .exams-price
-{
 	border-color:#fff;
 }
-.light-theme .exams-price:hover
+.exams-price:hover
 {
 	background:#E6E6E6;
 }
 .dark-theme .exams-price
 {
 	border-color:#4D4D4D;
+}
+.dark-theme .exams-price:hover
+{
+	background:#404040;
 }
 
 .text-content
