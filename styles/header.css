@@ -166,3 +166,12 @@
 		width:2000px;
 	}
 }
+
+@media screen and (max-width:380px)
+{
+	.header-cell
+	{
+		text-align:left;
+		margin-left:10px;
+	}
+}
