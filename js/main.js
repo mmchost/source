@@ -307,7 +307,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 		footerMenu.innerHTML = 
 		"<table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"font-size:14px; color:#999999; margin-left:10px;\">" +
 		"<tr>" +
-		"<td><img class=\"logo-footer\" src=\"" + imagesPath + "logo_small.png\"/></td>" +
+		"<td class='logo-footer'></td>" +
 		"<td>" +
 		"<table cellpadding=\"0\" cellspacing=\"0\" style=\"display:inline-table;\">" +
 		"<tr><td class=\"footer-menu\">" + homeMenu.replace("{0}", "Acasa") + "</td>" +
