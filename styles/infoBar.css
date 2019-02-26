@@ -54,6 +54,10 @@
 	border-width:1px 0px 0px 0px; 
 	border-color:#E6E6E6;
 }
+.dark-theme .cookiesbar
+{
+	background:#4D4D4D;
+}
 
 @media screen and (max-width:990px)
 {
