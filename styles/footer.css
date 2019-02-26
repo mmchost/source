@@ -24,6 +24,24 @@
 
 .logo-footer
 {
+	padding:0px;
+	width:32px;
+	min-width:32px;	
+	height:32px;
+	min-height:32px;
+	background:url(../images/logo-small-l.png);
+	background-repeat:no-repeat; 
+	background-attachment:scroll;
+	background-clip:border-box; 
+	background-origin:padding-box;
+	background-position-x:center;
+	background-position-y:center;
+	background-size:auto auto;
+	box-sizing:inherit;
+}
+.dark-theme .logo-footer
+{
+	background:url(../images/logo-small-d.png);
 }
 
 .footer-copyright-whitespace
