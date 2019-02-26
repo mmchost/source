@@ -10,6 +10,15 @@
     font-style: normal;
 }
 
+.light-theme
+{
+	background-color:#F3F3F3;
+}
+.dark-theme
+{
+	background-color:#343434;
+}
+
 #header, #footer
 {
 	position:fixed;
