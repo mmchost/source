@@ -193,7 +193,11 @@ body
 	text-align:left;
 	padding-top:32px;
 	padding-bottom:32px;
-	background:white;
+	background:#fff;
+}
+.dark-theme .text-content
+{
+	background:#404040;
 }
 
 
