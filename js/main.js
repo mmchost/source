@@ -24,27 +24,6 @@ function RefreshCartItemsCount()
 
 function Page_OnResize(imagesPath)
 {
-	/*
-	var banner = document.getElementById("banner");
-	
-	if (banner)
-	{
-		var w = document.documentElement.clientWidth; // || documentBody.clientWidth || window.innerWidth;
-		
-		if (w>=721)
-		{
-			banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "banner/1920L.png); height:480px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
-		}
-		if (w<=1080)
-		{
-			banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "banner/720L.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
-		}
-		if (w<=720)
-		{
-			banner.innerHTML = "<div style=\"background-image:url(" + imagesPath + "banner/320L.png); height:320px; background-repeat:no-repeat; background-attachment:scroll; background-clip: border-box; background-origin:padding-box; background-position-x:center; background-size:auto auto; display:block; box-sizing:inherit;\"></div>";
-		}		
-	}
-	*/
 	RefreshPosition();
 }
 
@@ -446,5 +425,9 @@ function ChangeTheme()
 	if (themeButton)
 	{
 		themeButton.className = className;
+		if (body.className === "dark-theme")
+		{
+			document.cookie = "theme=dark";
+		}
 	}
 }
