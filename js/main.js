@@ -429,5 +429,9 @@ function ChangeTheme()
 		{
 			document.cookie = "theme=dark";
 		}
+		else if (body.className == "light-theme")
+		{
+			document.cookie = "theme=light";
+		}
 	}
 }
