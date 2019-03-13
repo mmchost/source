@@ -1,23 +1,15 @@
-function RefreshCartItemsCount()
+function RefreshCartItemsCount(list)
 {
 	var cartItemsCount = document.getElementById("cartitemscount");
 	if (cartItemsCount)
 	{
-		if(cart.length > 0)
-		{
-			cartItemsCount.style.display = "inline-block";
-			cartItemsCount.innerHTML =  cart.length;			
-		}
-		else
-		{
-			cartItemsCount.style.display = "inline-block"; //"none";
-			cartItemsCount.innerHTML =  cart.length;			
-		}
+		cartItemsCount.style.display = "inline-block";
+		cartItemsCount.innerHTML =  list.length;
 		
-		var cartMenuItem = document.getElementById("cartMenuItem");		
+		var cartMenuItem = document.getElementById("cartMenuItem");
 		if (cartMenuItem)
 		{
-			cartMenuItem.title = "Cosul de cumparaturi\u000dArticole: " + cart.length;
+			cartMenuItem.title = "Cosul de cumparaturi\u000dArticole: " + list.length;
 		}
 	}
 }
