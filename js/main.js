@@ -120,7 +120,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 		cartMenu = 
 		"<td id='cartMenuItem' class='menu-item' style='cursor:pointer;' title='Cosul de cumparaturi'>" +
 		"<center>" +
-		"<a href='cart'>" +
+		"<a href='" + root + "cart'>" +
 		"<table cellpadding='0' cellspacing='0'><tr><td>COS&nbsp;</td><td><img class='cart-image' src='" + imagesPath + "cart.png'/>" +
 		"<span class='cart-items-count' id='cartitemscount'>99</span></td></tr></table>" +
 		"</a>" +
