@@ -289,7 +289,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
 		"<td class=\"footer-menu\"><a href=\"#contact\">Contact</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
-		"<td class=\"footer-menu\"><a href=\"rgpd\">RGPD</a></td>" +
+		"<td class='footer-menu'><a href='" + root + "rgpd'>RGPD</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
 		"</tr>" +
 		"</table>" +
@@ -297,9 +297,9 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 		"<tr>" +
 		"<td class=\"footer-menu\"><a href=\"http://anpc.gov.ro\">ANPC</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
-		"<td class=\"footer-menu\"><a href=\"terms\">Termeni si conditii</a></td>" +
+		"<td class='footer-menu'><a href='" + root + "terms'>Termeni si conditii</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
-		"<td class=\"footer-menu\"><a href=\"cookiespolicy\">Politica de cookies</a></td>" +		
+		"<td class='footer-menu'><a href='" + root + "cookiespolicy'>Politica de cookies</a></td>" +		
 		"</tr></table>" +
 		"</td></tr></table>";
 	}
