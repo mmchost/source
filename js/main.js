@@ -96,7 +96,7 @@ function RefreshPosition()
 	}
 }
 
-function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
+function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 {
 	var storeString = "Magazin";
 	if (isStore == true)
@@ -104,25 +104,25 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 		storeString = "Produse";
 	}
 	
-	var homeMenu = "<a href=\"./\">{0}</a>";
-	var storeMenu = "<a href=\"https://store.mediosmedical.ro\">{0}</a>";
-	var servicesMenu = "<a href='./#exams'>SERVICII</a>";
+	var homeMenu = "<a href='" + root + "'>{0}</a>";
+	var storeMenu = "<a href='https://store.mediosmedical.ro'>{0}</a>";
+	var servicesMenu = "<a href='" + root + "#exams'>SERVICII</a>";
 	var cartMenu = "";
-	var appLogo = "<a href=\"https://www.mediosmedical.ro\" style=\"display:block;\"><img class=\"header-logo\" src=\"" + imagesPath + "logo.png\" alt=\"Medios Medical Center\"/></a>";
+	var appLogo = "<a href='https://www.mediosmedical.ro' style='display:block;'><img class='header-logo' src='" + imagesPath + "logo.png' alt='Medios Medical Center'/></a>";
 	
 	if (isMainPage == true)
 	{
 		servicesMenu = "<a href='#exams'>SERVICII</a>";
-		homeMenu = "<a href=\"#home\">{0}</a>";
+		homeMenu = "<a href='#home'>{0}</a>";
 	}
 	if (addCart == true)
 	{
 		cartMenu = 
-		"<td id=\"cartMenuItem\" class=\"menu-item\" style=\"cursor:pointer;\" title=\"Cosul de cumparaturi\">" +
+		"<td id='cartMenuItem' class='menu-item' style='cursor:pointer;' title='Cosul de cumparaturi'>" +
 		"<center>" +
-		"<a href=\"cart\">" +
-		"<table cellpadding=\"0\" cellspacing=\"0\"><tr><td>COS&nbsp;</td><td><img class=\"cart-image\" src=\"" + imagesPath + "cart.png\"/>" +
-		"<span class=\"cart-items-count\" id=\"cartitemscount\">99</span></td></tr></table>" +
+		"<a href='cart'>" +
+		"<table cellpadding='0' cellspacing='0'><tr><td>COS&nbsp;</td><td><img class='cart-image' src='" + imagesPath + "cart.png'/>" +
+		"<span class='cart-items-count' id='cartitemscount'>99</span></td></tr></table>" +
 		"</a>" +
 		"</center>" +
 		"</td>";		
@@ -130,12 +130,12 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 	if (isStore == true)
 	{
 		servicesMenu = "<a href='https://www.mediosmedical.ro/#exams'>SERVICII</a>";
-		storeMenu = "<a href=\"./\">{0}</a>";
+		storeMenu = "<a href='" + root + "'>{0}</a>";
 		if (isMainPage)
 		{
-			storeMenu = "<a href=\"#products\">{0}</a>";
+			storeMenu = "<a href='#products'>{0}</a>";
 		}
-		appLogo = "<a href=\"https://store.mediosmedical.ro\" style=\"display:block;\"><img class=\"header-logo\" src=\"" + imagesPath + "logo-store.png\" alt=\"Medios Online Store\"/></a>";
+		appLogo = "<a href='https://store.mediosmedical.ro' style='display:block;'><img class='header-logo' src='" + imagesPath + "logo-store.png' alt='Medios Online Store'/></a>";
 	}
 
 	var header = document.getElementById("header");
@@ -149,19 +149,19 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 			{
 				cell.innerHTML = 
 				"<!--[if lt IE 9]>" +
-				"<table cellpadding=\"0\" cellspacing=\"0\" border=\"0\" style=\"display:inline-block;\">" +
+				"<table cellpadding='0' cellspacing='0' border='0' style='display:inline-block;'>" +
 				"<tr>" +
-				"<td class=\"header-cell\" style=\"background:#005B99;\">" + appLogo + "</td>" +
-				"<td class=\"menu-separator\"></td>" +
-				"<td class=\"menu-item\">" +
+				"<td class='header-cell' style='background:#005B99;'>" + appLogo + "</td>" +
+				"<td class='menu-separator'></td>" +
+				"<td class='menu-item'>" +
 				homeMenu.replace("{0}", "ACAS&#258;") +
 				"</td>" +
-				"<td class=\"menu-item\">" + servicesMenu + "</td>" +
-				"<td class=\"menu-item\">" +
+				"<td class='menu-item'>" + servicesMenu + "</td>" +
+				"<td class='menu-item'>" +
 				storeMenu.replace("{0}", storeString.toUpperCase()) +
 				"</td>" +
-				"<td class=\"menu-item\">" +
-				"<a href=\"#contact\">CONTACT</a>" +
+				"<td class='menu-item'>" +
+				"<a href='#contact'>CONTACT</a>" +
 				"</td>" +
 				cartMenu +
 				"</tr>" +
@@ -169,28 +169,28 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage)
 				"<![endif]-->" +
 				
 				"<!--[if gt IE 8]> <!-- -->" +
-				"<table class=\"header-menu\" cellpadding=\"0\" cellspacing=\"0\">" +
+				"<table class='header-menu' cellpadding='0' cellspacing='0'>" +
 				"<tr>" +
-				"<td class=\"header-cell\">" + appLogo + "</td>" +
-				"<td class=\"menu-separator\"></td>" +
+				"<td class='header-cell'>" + appLogo + "</td>" +
+				"<td class='menu-separator'></td>" +
 				"</tr>" +
 				"</table>" +
-				"<table class=\"header-menu\" cellpadding=\"0\" cellspacing=\"0\">" +
+				"<table class='header-menu' cellpadding='0' cellspacing='0'>" +
 				"<tr>" +
-				"<td class=\"header-menu-cell\">" +
-				"<table cellpadding=\"0\" cellspacing=\"0\" align=\"center\">" +
-				"<tr id=\"main-menu\">" +
-				"<td class=\"menu-item\">" +
+				"<td class='header-menu-cell'>" +
+				"<table cellpadding='0' cellspacing='0' align='center'>" +
+				"<tr id='main-menu'>" +
+				"<td class='menu-item'>" +
 				"<center>" +
 				homeMenu.replace("{0}", "ACAS&#258;") + 
 				"</center>" +
 				"</td>" +				
-				"<td class=\"menu-item\"><center>" + servicesMenu + "</center></td>" +
-				"<td class=\"menu-item\">" +
+				"<td class='menu-item'><center>" + servicesMenu + "</center></td>" +
+				"<td class='menu-item'>" +
 				storeMenu.replace("{0}", storeString.toUpperCase()) +
 				"</td>" +
-				"<td class=\"menu-item\">" +
-				"<center><a href=\"#contact\">CONTACT</a></center>" +
+				"<td class='menu-item'>" +
+				"<center><a href='#contact'>CONTACT</a></center>" +
 				"</td>" +
 				cartMenu +				
 				"</tr>" +
