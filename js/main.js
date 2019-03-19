@@ -19,9 +19,9 @@ function Page_OnResize(imagesPath)
 	RefreshPosition();
 }
 
-function Page_OnLoad(addCart, showInfoBar, showCookiesBar, isStore, imagesPath, isMainPage) 
+function Page_OnLoad(addCart, showInfoBar, showCookiesBar, isStore, imagesPath, isMainPage, root) 
 {
-	InitializeComponent(isStore, addCart, imagesPath, isMainPage);
+	InitializeComponent(isStore, addCart, imagesPath, isMainPage, root);
 	if (showInfoBar == true)
 	{
 		InitializeInfoBar(imagesPath);
