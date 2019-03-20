@@ -200,7 +200,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 				"</table>" +
 				"<div class='theme-button-container'>" +
 				"<a id='maximizeButton' class='maximize-button' onclick='Maximize()'/>" +
-				"<a id='themeButton' class='theme-button-light' onclick='ChangeTheme()'/>" +
+				//"<a id='themeButton' class='theme-button-light' onclick='ChangeTheme()'/>" +
 				"</div>" +
 				"<!-- <![endif]-->";
 			}
