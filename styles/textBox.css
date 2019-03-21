@@ -66,9 +66,11 @@
 	font-size:16px;
 	color:#000;
 }
-.textbox-numeric[disabled="disabled"]
+.textbox-numeric:disabled,
+.textbox-numeric[disabled],
+.textbox-numeric[disabled='disabled'],
 {
-	background-color:#fff;	
+	background:#fff;
 	color:#000;
 }
 .textbox-numeric:focus 
