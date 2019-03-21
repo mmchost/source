@@ -66,17 +66,14 @@
 	font-size:16px;
 	color:#000;
 }
-
+.textbox-numeric[disabled="disabled"]
+{
+	background-color:#fff;	
+	color:#000;
+}
 .textbox-numeric:focus 
 {
     border:1px solid #0074BB;
-}
-
-.textbox-numeric:disabled ,
-.textbox-numeric[disabled]
-{
-	background:#fff;
-	color:#000;
 }
 
 @media screen and (max-width:990px) 
