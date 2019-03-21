@@ -46,6 +46,7 @@
 	width:32px;
 	height:32px;
 	pointer-events:none;
+	border-style:none;
 }
 
 @media screen and (max-width:990px)
