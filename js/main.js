@@ -152,7 +152,10 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 	{
 		servicesMenu = "<a href='https://www.mediosmedical.ro/#exams'>SERVICII</a>";
 		storeMenu = "<a href='" + root + url + "#products'>{0}</a>";
-		homeMenu = "<a href='" + root + url + "'>{0}</a>";
+		if (!isMainPage)
+		{
+			homeMenu = "<a href='" + root + url + "'>{0}</a>";
+		}
 		if (isMainPage)
 		{
 			storeMenu = "<a href='" + url + "#products'>{0}</a>";			
