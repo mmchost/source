@@ -109,6 +109,16 @@ function RefreshPosition()
 
 function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 {
+	var url = "";
+	var urlSource = GetCookie("urlSource");	
+	if (urlSource)
+	{
+		if (urlSource.length > 0 && urlSource !== "undefined")
+		{
+			url = "?source=" + urlSource;
+		}
+	}
+	
 	var storeString = "Magazin";
 	if (isStore == true)
 	{
@@ -141,10 +151,10 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 	if (isStore == true)
 	{
 		servicesMenu = "<a href='https://www.mediosmedical.ro/#exams'>SERVICII</a>";
-		storeMenu = "<a href='" + root + "'>{0}</a>";
+		storeMenu = "<a href='" + root + url + "#products'>{0}</a>";
 		if (isMainPage)
 		{
-			storeMenu = "<a href='#products'>{0}</a>";
+			storeMenu = "<a href='" + url + "#products'>{0}</a>";
 		}
 		appLogo = "<a href='https://store.mediosmedical.ro' style='display:block;'><img class='header-logo' src='" + imagesPath + "logo-store.png' alt='Medios Online Store'/></a>";
 	}
