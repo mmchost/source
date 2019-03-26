@@ -152,11 +152,12 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 	{
 		servicesMenu = "<a href='https://www.mediosmedical.ro/#exams'>SERVICII</a>";
 		storeMenu = "<a href='" + root + url + "#products'>{0}</a>";
+		homeMenu = "<a href='" + root + url + "'>{0}</a>";
 		if (isMainPage)
 		{
-			storeMenu = "<a href='" + url + "#products'>{0}</a>";
+			storeMenu = "<a href='" + url + "#products'>{0}</a>";			
 		}
-		appLogo = "<a href='https://store.mediosmedical.ro' style='display:block;'><img class='header-logo' src='" + imagesPath + "logo-store.png' alt='Medios Online Store'/></a>";
+		appLogo = "<a href='https://store.mediosmedical.ro/" + url + "' style='display:block;'><img class='header-logo' src='" + imagesPath + "logo-store.png' alt='Medios Online Store'/></a>";
 	}
 
 	var header = document.getElementById("header");
