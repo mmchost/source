@@ -91,7 +91,12 @@ function InitializePage()
 		if (subTitle)
 		{
 			subTitle.innerHTML = product["name"];
-		}		
+		}
+		var detailsProductId = document.getElementById("detailsProductId");
+		if (detailsProductId)
+		{
+			detailsProductId.innerHTML = product["id"];
+		}
 		
 		var images = product["images"].split(",");
 		
