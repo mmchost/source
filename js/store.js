@@ -153,7 +153,7 @@ function AddItem(index)
 			else			
 			{
 				cart.push(products[index]);
-				document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
+				document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
 
 				location.href = "cart";
 
