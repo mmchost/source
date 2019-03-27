@@ -48,7 +48,6 @@ function LoadDefault(url, productID)
 	
 function ReadProduct(xml, productID)
 {
-	var product;
 	var xmlDoc = xml.responseXML;
 	var elements =  xmlDoc.getElementsByTagName("product");	
 	
@@ -71,7 +70,7 @@ function ReadProduct(xml, productID)
 		}
 	}
 	
-	InitializePage(product);
+	InitializePage();
 }
 	
 function InitializePage()
