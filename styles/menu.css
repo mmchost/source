@@ -53,6 +53,9 @@
 .cartMenuText
 {
 }
+.cartMenuContent
+{
+}
 
 @media screen and (max-width:1300px)
 {
@@ -94,5 +97,9 @@
 	.cartMenuText
 	{
 		display:none;
+	}
+	.cartMenuContent
+	{
+		margin-left:-10px;
 	}
 }
