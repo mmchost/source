@@ -126,7 +126,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 	}
 	
 	var homeMenu = "<a href='" + root + "'>{0}</a>";
-	var storeMenu = "<a href='https://store.mediosmedical.ro'>{0}</a>";
+	var storeMenu = "<a href='https://store.mediosmedical.ro" + url + "'>{0}</a>";
 	var servicesMenu = "<a href='" + root + "#exams'>SERVICII</a>";
 	var cartMenu = "";
 	var appLogo = "<a href='https://www.mediosmedical.ro' style='display:block;'><img class='header-logo' src='" + imagesPath + "logo.png' alt='Medios Medical Center'/></a>";
