@@ -73,7 +73,7 @@ function RemoveItem(index)
 {		
 	cart.splice(index, 1);
 	
-	document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
+	document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
 	
 	RefreshCart(cart);
 	RefreshCartItemsCount(cart);
@@ -89,7 +89,7 @@ function CalculateTotal(index, value)
 		}
 	}
 	cart[index]["quantity"] = Math.round(cart[index]["quantity"]) + value;	
-	document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
+	document.cookie = "cart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
 	RefreshCart(cart);
 }
 
