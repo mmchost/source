@@ -1,6 +1,6 @@
-function LoadXml(url, productID)
+function LoadSource(url, productID)
 {
-	var fileName = "products.xml";
+	var fileName = "";
 	if (url)
 	{
 		fileName = "https://store.mediosmedical.ro/" + url + ".xml";
@@ -14,11 +14,11 @@ function LoadXml(url, productID)
 	    {
 		    if (this.status == 200)
 		    {
-			      ReadProduct(this, productID);
+			    ReadProduct(this, productID, pro);
 		    }
 		    else
 		    {
-            LoadDefault(productID);
+			    LoadDefault("products.xml", productID);
 		    }
 	    }	
 	};
@@ -26,7 +26,7 @@ function LoadXml(url, productID)
 	xhttp.send();
 }
 
-function LoadDefault(productID)
+function LoadDefault(url, productID)
 {
 	var reader;
 	reader = new XMLHttpRequest();
@@ -40,12 +40,13 @@ function LoadDefault(productID)
 			}
 		}
 	};
-	reader.open("GET", "https://store.mediosmedical.ro/products.xml", true);
+	reader.open("GET", "https://store.mediosmedical.ro/" + url, true);
 	reader.send();
 }
 	
 function ReadProduct(xml, productID)
 {
+	var product;
 	var xmlDoc = xml.responseXML;
 	var elements =  xmlDoc.getElementsByTagName("product");	
 	
@@ -68,7 +69,7 @@ function ReadProduct(xml, productID)
 		}
 	}
 	
-	InitializePage();
+	InitializePage(product);
 }
 	
 function InitializePage(product)
@@ -169,11 +170,13 @@ function InitializePage(product)
 	}
 }
 
-function AddItem(product, cart)
+function AddItem(product)
 {
 	if (product["price"] > 0)
 	{
-		//var product = cart.find(obj => { return obj["id"] === products[index]["id"] });
+		var cart = GetCookie("storeCart");
+		cart = JSON.parse(decodeURIComponent(cart));
+		
 		var exists = false;
 		for (var i=0; i<cart.length; i++)
 		{
