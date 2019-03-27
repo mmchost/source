@@ -109,16 +109,6 @@ function RefreshPosition()
 
 function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 {
-	var url = "";
-	var urlSource = GetCookie("urlSource");	
-	if (urlSource)
-	{
-		if (urlSource.length > 0 && urlSource !== "undefined")
-		{
-			url = "?source=" + urlSource;
-		}
-	}
-	
 	var storeString = "Magazin";
 	if (isStore == true)
 	{
@@ -126,7 +116,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 	}
 	
 	var homeMenu = "<a href='" + root + "'>{0}</a>";
-	var storeMenu = "<a href='https://store.mediosmedical.ro" + url + "'>{0}</a>";
+	var storeMenu = "<a href='https://store.mediosmedical.ro'>{0}</a>";
 	var servicesMenu = "<a href='" + root + "#exams'>SERVICII</a>";
 	var cartMenu = "";
 	var appLogo = "<a href='https://www.mediosmedical.ro' style='display:block;'><img class='header-logo' src='" + imagesPath + "logo.png' alt='Medios Medical Center'/></a>";
@@ -142,7 +132,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 		"<td id='cartMenuItem' class='menu-item' style='cursor:pointer;' title='Cosul de cumparaturi'>" +
 		"<center>" +
 		"<a href='" + root + "cart'>" +
-		"<table cellpadding='0' cellspacing='0'><tr><td>COS&nbsp;</td><td style='border-style:none;'><img class='cart-image' src='" + imagesPath + "cart.png'/>" +
+		"<table cellpadding='0' cellspacing='0'><tr><td class='cartMenuText'>COS&nbsp;</td><td style='border-style:none;'><img class='cart-image' src='" + imagesPath + "cart.png'/>" +
 		"<span class='cart-items-count' id='cartitemscount'>99</span></td></tr></table>" +
 		"</a>" +
 		"</center>" +
@@ -151,16 +141,16 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 	if (isStore == true)
 	{
 		servicesMenu = "<a href='https://www.mediosmedical.ro/#exams'>SERVICII</a>";
-		storeMenu = "<a href='" + root + url + "#products'>{0}</a>";
+		storeMenu = "<a href='" + root + "#products'>{0}</a>";
 		if (!isMainPage)
 		{
-			homeMenu = "<a href='" + root + url + "'>{0}</a>";
+			homeMenu = "<a href='" + root + "'>{0}</a>";
 		}
 		if (isMainPage)
 		{
-			storeMenu = "<a href='" + url + "#products'>{0}</a>";			
+			storeMenu = "<a href='#products'>{0}</a>";			
 		}
-		appLogo = "<a href='https://store.mediosmedical.ro/" + url + "' style='display:block;'><img class='header-logo' src='" + imagesPath + "logo-store.png' alt='Medios Online Store'/></a>";
+		appLogo = "<a href='https://store.mediosmedical.ro/' style='display:block;'><img class='header-logo' src='" + imagesPath + "logo-store.png' alt='Medios Online Store'/></a>";
 	}
 
 	var header = document.getElementById("header");
