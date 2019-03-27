@@ -1,3 +1,5 @@
+var product;
+
 function LoadSource(url, productID)
 {
 	var fileName = "";
@@ -72,7 +74,7 @@ function ReadProduct(xml, productID)
 	InitializePage(product);
 }
 	
-function InitializePage(product)
+function InitializePage()
 {
 	if (product)
 	{	
@@ -121,7 +123,7 @@ function InitializePage(product)
 		}
 		var iconColor = "#fff";
 		var buttonContent = "<table style='background:transparent; height:100%; width:100%;' cellpadding='0' cellspacing='0'><tr><td style='width:0px; background-color:" + iconColor + "; background-image:url(images/cart.png); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit;'></td><td>" + buttonText + "</td></tr></table>";
-		var button = "<button " + buttonState + " style='width:150px;' onclick='AddItem(" + product + ")'>" + buttonContent + "</button>";
+		var button = "<button " + buttonState + " style='width:150px;' onclick='AddItem()'>" + buttonContent + "</button>";
 		
 		var priceTable = document.getElementById("priceTable");				
 		if (priceTable)
@@ -144,9 +146,9 @@ function InitializePage(product)
 			{
 				quantityCell.innerHTML = 
 				"<table style='display:inline-block;' cellpadding='0' cellspacing='0'><tr>" + 
-				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + product + "," + -1 + ")'>-</button></td>" + 
+				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + -1 + ")'>-</button></td>" + 
 				"<td style='border-style:solid; border-color:#ccc; border-width:1px 0px 1px 0px; background:#fff;'><input class='textbox-numeric' type='text' value='" + product["quantity"] + "' style='width:40px;' disabled='true' title='Cantitate'/></td>" + 
-				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + product + "," + 1 + ")'>+</button></td>" +
+				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + 1 + ")'>+</button></td>" +
 				"</tr></table>";
 			}
 			
@@ -170,7 +172,7 @@ function InitializePage(product)
 	}
 }
 
-function AddItem(product)
+function AddItem()
 {
 	if (product["price"] > 0)
 	{
@@ -217,7 +219,7 @@ function RequestOffer()
 	window.location.href = "../requestoffer";
 }
 
-function CalculateTotal(product, value)
+function CalculateTotal(value)
 {
 	if (value < 1)
 	{
@@ -227,7 +229,7 @@ function CalculateTotal(product, value)
 		}
 	}
 	product["quantity"] = Math.round(product["quantity"]) + value;
-	InitializePage(product);
+	InitializePage();
 }
 	
 function PreviewImage(img)
