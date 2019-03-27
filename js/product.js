@@ -220,7 +220,7 @@ function RequestOffer()
 
 function RefreshQt(value)
 {
-	var qtInput = document.getElementById("quInput");
+	var qtInput = document.getElementById("qtInput");
 	if (qtInput)
 	{
 		qtInput.value = value;
