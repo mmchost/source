@@ -3,6 +3,8 @@ var cart = [];
 
 function LoadSource(url)
 {
+	var localCart = GetCookie("cart"); if (localCart) { cart = JSON.parse(decodeURIComponent(localCart)); } RefreshCartItemsCount(cart);
+	
 	var fileName = "";
 	if (url)
 	{
