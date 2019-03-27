@@ -3,7 +3,7 @@ var fee = 20;
 var shipmentFee = 0;
 
 function RefreshCart(list)
-{
+{	
 	var cartTable = document.getElementById("cart");
 	var emptycart = document.getElementById("emptycart");
 	if (cartTable && emptycart)
@@ -70,23 +70,13 @@ function RefreshCart(list)
 }
 
 function RemoveItem(index)
-{
-	/*
-	var i;
-	for (i=0; i<cart.length; i++)
-	{
-		if (cart[i]["id"] == index)
-		{
-			cart.splice(i, 1);
-		}
-	}
-	*/	
+{		
 	cart.splice(index, 1);
 	
 	document.cookie = "storeCart=" + encodeURIComponent(JSON.stringify(cart)) + ";domain=store.mediosmedical.ro;path=/;";
 	
 	RefreshCart(cart);
-	RefreshCartItemsCount();
+	RefreshCartItemsCount(cart);
 }
 
 function CalculateTotal(index, value)
