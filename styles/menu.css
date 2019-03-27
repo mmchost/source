@@ -50,6 +50,11 @@
 }
 */
 
+.cartMenuText
+{
+	display:block;
+}
+
 @media screen and (max-width:1300px)
 {
 	.menu-separator
@@ -83,4 +88,12 @@
 		width:0px;
 		height:32px;
 	} 
+}
+
+@media screen and (max-width:320px)
+{
+	.cartMenuText
+	{
+		display:none;
+	}
 }
