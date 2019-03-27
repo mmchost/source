@@ -132,7 +132,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 		"<td id='cartMenuItem' class='menu-item' style='cursor:pointer;' title='Cosul de cumparaturi'>" +
 		"<center>" +
 		"<a href='" + root + "cart'>" +
-		"<table cellpadding='0' cellspacing='0'><tr><td class='cartMenuText'>COS&nbsp;</td><td style='border-style:none;'><img class='cart-image' src='" + imagesPath + "cart.png'/>" +
+		"<table cellpadding='0' cellspacing='0' class='cartMenuContent'><tr><td class='cartMenuText'>COS&nbsp;</td><td style='border-style:none;'><img class='cart-image' src='" + imagesPath + "cart.png'/>" +
 		"<span class='cart-items-count' id='cartitemscount'>99</span></td></tr></table>" +
 		"</a>" +
 		"</center>" +
