@@ -121,7 +121,7 @@ function InitializePage(product)
 		}
 		var iconColor = "#fff";
 		var buttonContent = "<table style='background:transparent; height:100%; width:100%;' cellpadding='0' cellspacing='0'><tr><td style='width:0px; background-color:" + iconColor + "; background-image:url(images/cart.png); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:auto auto; box-sizing:inherit;'></td><td>" + buttonText + "</td></tr></table>";
-		var button = "<button " + buttonState + " style='width:150px;' onclick='AddItem()'>" + buttonContent + "</button>";
+		var button = "<button " + buttonState + " style='width:150px;' onclick='AddItem(" + product + ")'>" + buttonContent + "</button>";
 		
 		var priceTable = document.getElementById("priceTable");				
 		if (priceTable)
