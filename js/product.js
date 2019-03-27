@@ -218,6 +218,15 @@ function RequestOffer()
 	window.location.href = "../requestoffer";
 }
 
+function RefreshQt(value)
+{
+	var qtInput = document.getElementById("quInput");
+	if (qtInput)
+	{
+		qtInput.value = value;
+	}
+}
+
 function CalculateTotal(value)
 {
 	if (value < 1)
@@ -228,7 +237,7 @@ function CalculateTotal(value)
 		}
 	}
 	product["quantity"] = Math.round(product["quantity"]) + value;
-	InitializePage();
+	RefreshQt(product["quantity"]);
 }
 	
 function PreviewImage(img)
