@@ -1,0 +1,217 @@
+.container
+{
+	vertical-align:top;	
+}
+	
+.sub-container
+{
+	width:1px;
+	display:inline-table;
+	background:#fff;
+	border:solid 1px #e6e6e6;
+}
+
+.preview
+{
+	display:inline-block;
+	vertical-align:top;
+	width:300px;
+	/*border:solid 1px blue;*/
+}
+	
+.preview-container
+{
+	width:1px;
+	vertical-align:top;
+}
+
+.description
+{
+	display:inline-block;
+	vertical-align:top;
+	min-width:560px;
+}
+.subDescription
+{
+	display:none;
+	vertical-align:top;
+	width:100%;
+	background:#fff;
+}
+
+.price
+{
+	display:inline-block;
+	vertical-align:top;
+	text-align:left;
+	/*border:solid 1px green;*/
+}
+
+.title
+{
+	padding-top:10px;
+}
+.subTitle
+{
+	display:none;
+	/*border:solid 1px orange;*/
+	min-height:40px;
+	line-height:40px;
+	vertical-align:middle;
+}
+
+.parent
+{
+	border-style:none;
+	background:#e6e6e6;
+}
+	
+.detailsTable
+{
+	display:inline-table;
+	width:100%;	
+	text-align:left;
+	border-color:#E6E6E6;
+	border-style:solid;	
+	margin:0px;	
+	border-width:0px;
+	border-collapse:collapse;
+}
+.details-cell
+{
+	padding:5px;
+	text-align:left;
+	vertical-align:top;
+	border-style:solid;
+	border-width:1px 0px 0px 1px;
+	border-color:#E6E6E6;
+}
+.detailsTitle-cell
+{
+	padding:5px;
+	text-align:left;
+	vertical-align:top;
+	border-style:solid;
+	border-width:1px 0px 0px 1px;
+	border-color:#E6E6E6;
+}
+
+.priceTable
+{
+	//display:inline-table;
+	min-width:300px;
+	max-width:300px;
+	width:100%;
+	//float:left;
+	//height:100%;
+	//background:#E6E6E6;	
+}
+	
+.galleryButton
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:#e6e6e6;
+	border-radius:8px;
+	cursor:pointer;
+	margin:5px;
+}
+.galleryButton:hover
+{
+	background:#ccc;
+}
+.selectedGalleryButton
+{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:#0074bb;
+	border-radius:8px;
+	cursor:pointer;
+	margin:5px;	
+}
+
+@media screen and (max-width:1200px)
+{
+	.price
+	{
+		width:100%;
+		height:300px;
+	}
+	.description
+	{
+		width:100%;
+	}
+	.sub-container
+	{
+		width:100%;
+	}
+	.priceTable
+	{
+		max-width:100%;
+		width:100%;
+	}	
+	.detailsTable
+	{
+		max-width:100%;
+		width:100%;
+		border-width:0px 0px 0px 1px;
+	}
+}
+
+@media screen and (max-width:960px)
+{
+	.container
+	{
+		width:100%;
+		text-align:center;
+	}
+	.price
+	{
+		width:100%;		
+	}
+	.description
+	{
+		display:none;
+	}
+	.subTitle
+	{
+		display:inline-block;
+		width:100%;
+	}
+	.subDescription
+	{
+		max-width:100%;
+		width:100%;
+		display:block;		
+	}
+	.preview
+	{
+		width:100%;
+		display:block;
+		vertical-align:top;
+	}
+	.preview-container
+	{
+		width:100%;
+	}
+	.parent
+	{
+		width:100%;
+	}
+	.detailsTable
+	{
+		border-width:0px 1px 1px 0px;
+		width:100%;
+		max-width:100%;
+	}
+	.details-cell
+	{
+		border-width:1px 1px 0px 1px;
+	}
+	.detailsTitle-cell
+	{
+		display:none;
+	}
+}
