@@ -174,8 +174,12 @@ function AddItem(product)
 {
 	if (product["price"] > 0)
 	{
-		var cart = GetCookie("storeCart");
-		cart = JSON.parse(decodeURIComponent(cart));
+		var cart = [];
+		var localCart = GetCookie("cart");
+		if (localCart)
+		{
+			cart = JSON.parse(decodeURIComponent(localCart));
+		}
 		
 		var exists = false;
 		for (var i=0; i<cart.length; i++)
