@@ -20,7 +20,7 @@ function LoadSource(url, productID)
 		    }
 		    else
 		    {
-			    LoadDefault("products.xml", productID);
+			    LoadDefault("default", productID);
 		    }
 	    }	
 	};
@@ -42,7 +42,7 @@ function LoadDefault(url, productID)
 			}
 		}
 	};
-	reader.open("GET", "https://store.mediosmedical.ro/" + url, true);
+	reader.open("GET", "https://store.mediosmedical.ro/" + url + ".xml", true);
 	reader.send();
 }
 	
