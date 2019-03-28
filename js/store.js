@@ -95,7 +95,7 @@ function AddProducts(list)
 		var query = window.location.search.substring(1);		
 		if (query)
 		{
-			param = "/?" + query;
+			param = "?" + query;
 		}
 		
 		cell.innerHTML = "";
