@@ -25,7 +25,7 @@ function LoadSource(url)
 		    else
 		    {
 			document.cookie = "urlSource=;domain=.mediosmedical.ro;path=/;";
-		    	LoadDefault("products");
+		    	LoadDefault("default");
 		    }
 	    }	
 	};
