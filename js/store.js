@@ -1,9 +1,12 @@
 var products = [];
 var cart = [];
 
-function LoadSource(url)
+function LoadSource()
 {
-	var localCart = GetCookie("cart"); if (localCart) { cart = JSON.parse(decodeURIComponent(localCart)); } RefreshCartItemsCount(cart);
+	try { var localCart = GetCookie("cart"); if (localCart) { cart = JSON.parse(decodeURIComponent(localCart)); } RefreshCartItemsCount(cart); } catch(ex) {}
+	
+	var url = ""; var param = GetParameterByName("source");	if (param) { if (param.length > 0 && param !== "undefined") { url = param; } }	
+	if (url.length == 0) { var urlSource = GetCookie("urlSource"); if (urlSource) { if (urlSource.length > 0 && urlSource !== "undefined") { url = urlSource; } } }
 	
 	var fileName = "";
 	if (url)
