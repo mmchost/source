@@ -94,7 +94,7 @@ function AddProducts(list)
 			}
 			var iconColor = list[i]["available"] == "true" ? "#0066A2" : "#B7B7B7";
 			//var buttonContent = "<table align='center' style='width:100%;' cellpadding='0' cellspacing='0'><tr><td style='width:22px; background-image:url(images/cart.png); background-repeat:no-repeat; background-attachment:scroll; background-clip:border-box; background-origin:padding-box; background-position-x:center; background-position-y:center; background-size:22px 22px; box-sizing:inherit;'></td><td style='padding-left:10px;'>" + buttonText + "</td></tr></table>";			
-			var button = "<button " + buttonState + " style='width:150px;' onclick='AddItem(" + i + ")'>" + buttonText + "</button>";
+			var button = "<button " + buttonState + " onclick='AddItem(" + i + ")'>" + buttonText + "</button>";
 			var imageLink = "<a style='outline:none; display:block; width:100%; height:100%;' href='" + list[i]['page'] + "'>";
 			var nameLink = "<a class='hyperlink-default' href='" + list[i]['page'] + "'>";
 			var priceCell = Math.round(list[i]["price"]) > 0 ? "<tr><td align='center' class='item-price-cell'>" + list[i]["price"] + " Lei<a style='font-size:12px; color:#484848; font-weight:300;'>&nbsp;&nbsp;*TVA inclus</a></td></tr>" : "<tr><td align='center' class='item-price-cell'></td></tr>";
