@@ -10,27 +10,35 @@ function LoadSource(url)
 	{
 		fileName = url + ".xml";
 	}
-		
-	var xhttp;
-	xhttp = new XMLHttpRequest();
-	xhttp.onreadystatechange = function()
+	
+	if (fileName.length > 0)
 	{
-	    if (this.readyState == 4) 
-	    {
-		    if (this.status == 200)
+		var xhttp;
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function()
+		{
+		    if (this.readyState == 4) 
 		    {
-			document.cookie = "urlSource=" + url + ";domain=.mediosmedical.ro;path=/;";
-			ReadProducts(this);
-		    }
-		    else
-		    {
-			document.cookie = "urlSource=;domain=.mediosmedical.ro;path=/;";
-		    	LoadDefault("default");
-		    }
-	    }	
-	};
-	xhttp.open("GET", fileName, true);
-	xhttp.send();
+			    if (this.status == 200)
+			    {
+				document.cookie = "urlSource=" + url + ";domain=.mediosmedical.ro;path=/;";
+				ReadProducts(this);
+			    }
+			    else
+			    {
+				document.cookie = "urlSource=;domain=.mediosmedical.ro;path=/;";
+				LoadDefault("default");
+			    }
+		    }	
+		};
+		xhttp.open("GET", fileName, true);
+		xhttp.send();
+	}
+	else
+	{
+		document.cookie = "urlSource=;domain=.mediosmedical.ro;path=/;";
+		LoadDefault("default");
+	}		
 }
 			    
 function LoadDefault(source)
