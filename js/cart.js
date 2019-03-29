@@ -39,7 +39,7 @@ function RefreshCart(list)
 								 "<td style=\"vertical-align:top; width:100%; padding-left:10px;\">" +
 								 
 								"<table cellpadding=\"0\" cellspacing=\"0\" style=\"display:inline-table; float:left; width:50%; min-width:220px;\"><tr><td style=\"text-align:left; font-weight:bold;\">" + detailsLink + list[i]["name"] + "</a></td></tr>" +
-								"<tr><td style=\"text-align:left;\"><a class=\"button-delete\" style=\"margin-top:4px; margin-bottom:4px;\" onclick=\"RemoveItem(" + i + ")\">Elimina</a></td></tr></table>" +
+								"<tr><td style=\"text-align:left;\"><a class=\"button-delete\" style=\"margin-top:4px; margin-bottom:4px;\" onclick=\"RemoveItem(" + i + ")\">Elimină</a></td></tr></table>" +
 								
 								"<table cellpadding=\"0\" cellspacing=\"0\" style=\"display:inline-table; min-width:220px; width:50%; min-width:50%;\">" + 
 								"<tr><td width=\"1px\" style=\"vertical-align:top;\">" +
@@ -51,8 +51,8 @@ function RefreshCart(list)
 								"</tr></table>" +								
 								"</td>" +
 								
-								"<td></td><td style=\"text-align:right; vertical-align:top; padding:0px 0px 0px 5px; white-space:nowrap; width:1px; min-width:108px;\"><a title=\"Pret / buc.\">Pret/buc: " + list[i]["price"] + " Lei</a>" + //<hr style=\"border-style:none; height:1px; background:transparent; margin:0px 0px 0px 0px;\"/>
-								"<a style=\"margin-top:0px; display:block; color:#0074BB;\" title=\"Subtotal = Pret * Cantitate\">Subtotal: " + (Math.round((list[i]["price"] * list[i]["quantity"]) * 100) / 100) + " Lei" + "</a></td>" +
+								"<td></td><td style=\"text-align:right; vertical-align:top; padding:0px 0px 0px 5px; white-space:nowrap; width:1px; min-width:108px;\"><a title=\"Preț / buc.\">Preț/buc: " + list[i]["price"] + " Lei</a>" + //<hr style=\"border-style:none; height:1px; background:transparent; margin:0px 0px 0px 0px;\"/>
+								"<a style=\"margin-top:0px; display:block; color:#0074BB;\" title=\"Subtotal = Preț * Cantitate\">Subtotal: " + (Math.round((list[i]["price"] * list[i]["quantity"]) * 100) / 100) + " Lei" + "</a></td>" +
 								
 								"</td></tr>" +								
 								"</table></td></tr></table>";
