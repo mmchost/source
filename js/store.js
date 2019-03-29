@@ -99,6 +99,7 @@ function AddProducts(list)
 		}
 		
 		cell.innerHTML = "";
+		var cellValue = "";
 		for (var i=0; i<list.length; i++)
 		{
 			var itemName = list[i]["name"].replace(/\n/g, '<br/>');
@@ -117,7 +118,7 @@ function AddProducts(list)
 			var imageLink = "<a style='outline:none; display:block; width:100%; height:100%;' href='" + link + "'>";
 			var nameLink = "<a class='hyperlink-default' href='" + link + "'>";
 			var priceCell = Math.round(list[i]["price"]) > 0 ? "<tr><td align='center' class='item-price-cell'>" + list[i]["price"] + " Lei<a style='font-size:12px; color:#484848; font-weight:300;'>&nbsp;&nbsp;*TVA inclus</a></td></tr>" : "<tr><td align='center' class='item-price-cell'></td></tr>";
-			cell.innerHTML +=
+			cellValue +=
 				" <table cellpadding='0' cellspacing='0' class='item-table'>" +
 				"<tr><td align='center' class='item-image-cell'>" + imageLink + "<img class='item-image' src='" + itemImage + "'/></a></td></tr>" +
 				"<tr><td align='center' class='item-name-cell'>" + nameLink + itemName + "</a></td></tr>" +
@@ -127,6 +128,7 @@ function AddProducts(list)
 				"<tr><td style='padding-top:0px;' id='qtCell" + i + "'></td></tr>" +
 				"<tr><td align='center' class='item-button-cell'>" + button + "</td></tr>" + "</table>";			
 		}
+		cell.innerHTML = cellValue;
 	}
 	InitializeQt();
 }
