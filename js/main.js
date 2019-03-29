@@ -20,7 +20,7 @@ function RefreshCartItemsCount(list)
 		var cartMenuItem = document.getElementById("cartMenuItem");
 		if (cartMenuItem)
 		{
-			cartMenuItem.title = "Cosul de cumparaturi\u000dArticole: " + list.length;
+			cartMenuItem.title = "Coșul de cumpărături\u000dArticole: " + list.length;
 		}
 	}
 }
