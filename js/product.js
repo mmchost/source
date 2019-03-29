@@ -142,7 +142,7 @@ function InitializePage()
 		}
 		
 		var buttonState = product["available"] == "true" ? "class='button-default'" : "class='button-default-disabled' disabled='true'";
-		var buttonText = Math.round(product["price"]) > 0 ? "Adauga in cos" : "Solicita oferta";
+		var buttonText = Math.round(product["price"]) > 0 ? "Adaugă în cos" : "Solicită oferta";
 		if (product["available"] == "false")
 		{
 			buttonText = "Stoc epuizat";
