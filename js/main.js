@@ -129,11 +129,11 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 	if (addCart == true)
 	{
 		cartMenu = 
-		"<td id='cartMenuItem' class='menu-item' style='cursor:pointer;' title='Cosul de cumparaturi'>" +
+		"<td id='cartMenuItem' class='menu-item' style='cursor:pointer;' title='Coșul de cumpărături'>" +
 		"<center>" +
 		"<a href='" + root + "cart'>" +
-		"<table cellpadding='0' cellspacing='0' class='cartMenuContent'><tr><td class='cartMenuText'>COS&nbsp;</td><td style='border-style:none;'><img class='cart-image' src='" + imagesPath + "cart.png'/>" +
-		"<span class='cart-items-count' id='cartitemscount'>99</span></td></tr></table>" +
+		"<table cellpadding='0' cellspacing='0' class='cartMenuContent'><tr><td class='cartMenuText'>COȘ&nbsp;</td><td style='border-style:none;'><img class='cart-image' src='" + imagesPath + "cart.png'/>" +
+		"<span class='cart-items-count' id='cartitemscount'>?</span></td></tr></table>" +
 		"</a>" +
 		"</center>" +
 		"</td>";		
@@ -312,7 +312,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 		"<tr>" +
 		"<td class=\"footer-menu\"><a href=\"http://anpc.gov.ro\">ANPC</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
-		"<td class='footer-menu'><a href='" + root + "terms'>Termeni si conditii</a></td>" +
+		"<td class='footer-menu'><a href='" + root + "terms'>Termeni și condiții</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
 		"<td class='footer-menu'><a href='" + root + "cookiespolicy'>Politica de cookies</a></td>" +		
 		"</tr></table>" +
@@ -350,10 +350,10 @@ function InitializeInfoBar(imagesPath)
 		"<a title=\"" + 
 		"TBA" + 
 		"\">" + 
-		"Program de lucru pentru perioada [29.12.2018 - 02.01.2019]" + "<br/>" +
-		"24.12.2018, 27.12.2018, 28.12.2018 : 08:30 - 18:00" + "<br/>" +
-		"25.12.2018, 26.12.2018 : Inchis" + "<br/>" +
-		"29.12.2018 - 02.01.2019 : Inchis" +
+		"TBA" + "<br/>" +
+		"TBA" + "<br/>" +
+		"TBA" + "<br/>" +
+		"TBA" +
 		"</a>" +
 		"</div>" +
 		"</td>" +
@@ -380,7 +380,7 @@ function InitializeCookiesBar(imagesPath)
 		"<td style=\"text-align:right; padding-right:10px;\"><img class=\"info-bar-icon\" src=\"" + imagesPath + "info.png\"/></td>" +
 		"<td class=\"info-bar-container\" style=\"font-weight:normal;\">" +
 		"<div class=\"info-bar-content\">" +
-		"<a>Informa&#539;ie: Acest website foloseste cookies. Navigand in continuare, va exprimati acordul asupra <a class=\"hyperlink-highlight\" href=\"cookiespolicy\">politicii de cookies</a>!</a>" +
+		"<a>Informa&#539;ie: Acest website folosește cookies. Navigând în continuare, vă exprimați acordul asupra <a class=\"hyperlink-highlight\" href=\"cookiespolicy\">politicii de cookies</a>!</a>" +
 		"</td>" +
 		"<td class=\"info-bar-cell\"><button class=\"button\" onclick=\"CookiesButton_Click()\">OK</button></td>" +
 		"</tr>" +
