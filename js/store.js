@@ -106,7 +106,7 @@ function AddProducts(list)
 			var itemImage = "product/images/" + list[i]["images"].split(",")[0];
 			//var isavailable = list[i]["available"] == "true" ? " class='item-available-true'>in stoc" : " class='item-available-false'><a style='line-height:22px;'>stoc epuizat</a>";
 			var buttonState = list[i]["available"] == "true" ? "class='button-default'" : "class='button-default-disabled' disabled='true'";
-			var buttonText = Math.round(list[i]["price"]) > 0 ? "Adauga in cos" : "Solicita oferta";
+			var buttonText = Math.round(list[i]["price"]) > 0 ? "Adaugă în coș" : "Solicită oferta";
 			if (list[i]["available"] == "false")
 			{
 				buttonText = "Stoc epuizat";
