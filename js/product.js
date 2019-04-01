@@ -172,7 +172,7 @@ function InitializePage()
 			{
 				quantityCell.innerHTML = 
 				"<table style='display:inline-block;' cellpadding='0' cellspacing='0'><tr>" + 
-				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + -1 + ")'>-</button></td>" + 
+				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + -1 + ")'>–</button></td>" + 
 				"<td style='border-style:solid; border-color:#ccc; border-width:1px 0px 1px 0px; background:#fff;'><input id='qtInput' class='textbox-numeric' type='text' value='" + product["quantity"] + "' style='width:40px;' disabled='true' title='Cantitate'/></td>" + 
 				"<td><button title='Cantitate' class='button-numeric' onclick='CalculateTotal(" + 1 + ")'>+</button></td>" +
 				"</tr></table>";
