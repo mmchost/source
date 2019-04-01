@@ -45,7 +45,7 @@ function RefreshCart(list)
 								"<tr><td width=\"1px\" style=\"vertical-align:top;\">" +
 								
 								"<table style=\"display:inline-block;\" cellpadding=\"0\" cellspacing=\"0\"><tr>" + 
-								"<td><button title=\"Cantitate\" class=\"button-numeric\" onclick=\"CalculateTotal(" + i + "," + -1 + ")\">-</button></td>" + 
+								"<td><button title=\"Cantitate\" class=\"button-numeric\" onclick=\"CalculateTotal(" + i + "," + -1 + ")\">–</button></td>" + 
 								"<td style=\"border-style:solid; border-color:#ccc; border-width:1px 0px 1px 0px;\"><input class=\"textbox-numeric\" type=\"text\" value=\"" + list[i]["quantity"] + "\" style=\"width:40px;\" disabled=\"true\" title=\"Cantitate\"\"/></td>" + 
 								"<td><button title=\"Cantitate\" class=\"button-numeric\" onclick=\"CalculateTotal(" + i + "," + 1 + ")\">+</button></td>" +										 
 								"</tr></table>" +								
