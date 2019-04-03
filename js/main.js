@@ -120,6 +120,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 	var servicesMenu = "<a href='" + root + "#exams'>SERVICII</a>";
 	var cartMenu = "";
 	var appLogo = "<a href='https://www.mediosmedical.ro' style='display:block;'><img class='header-logo' src='" + imagesPath + "logo.png' alt='Medios Medical Center'/></a>";
+	var resxMenu = "<td class='menu-item'><a href='resources'>PENTRU MEDICI</a></td>";
 	
 	if (isMainPage == true)
 	{
@@ -140,6 +141,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 	}
 	if (isStore == true)
 	{
+		resxMenu = "";
 		servicesMenu = "<a href='https://www.mediosmedical.ro/#exams'>SERVICII</a>";
 		storeMenu = "<a href='" + root + "#products'>{0}</a>";
 		if (!isMainPage)
