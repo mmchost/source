@@ -447,5 +447,5 @@ function ChangeTheme()
 
 function DownloadLeafImplant()
 {
-	
+	location.href = "https://dl.dropboxusercontent.com/s/ka4mtmgyfkaj5qi/LeafImplant.zip";
 }
