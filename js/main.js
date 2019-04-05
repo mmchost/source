@@ -449,3 +449,8 @@ function DownloadLeafImplant()
 {
 	location.href = "https://dl.dropboxusercontent.com/s/ka4mtmgyfkaj5qi/LeafImplant.zip";
 }
+
+function InstallGuideLeafImplant()
+{
+	location.href = "https://dl.dropboxusercontent.com/s/34c862727yj2n0r/Ghid-LeafImplant.pdf";
+}
