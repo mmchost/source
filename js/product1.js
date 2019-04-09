@@ -151,7 +151,7 @@ function InitializePage()
 			{
 				var current = i+1;
 				var className = i == 0 ? "selectedGalleryButton" : "galleryButton";
-				text += "<a title='" + current + "/" + images.length + "' name='" + images[i] + "' class='" + className + "' onclick='GalleryClick(" + i + ",this)'/>";
+				text += "<a title='" + current + "/" + images.length + "' name='" + images[i] + "' class='" + className + "' onclick='GalleryClick(" + current + ",this)'/>";
 			}
 			galleryButtons.innerHTML = text;
 		}
