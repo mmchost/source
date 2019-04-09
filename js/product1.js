@@ -1,5 +1,4 @@
 var product, item, midpoint;
-var index = 0;
 var itemsCount = 0;
 
 function LoadSource(productID)
@@ -324,12 +323,10 @@ function GalleryTouchend(event)
 		var left = item.style.marginLeft.replace("px", "");
 		left = Math.round(left) - 300;
 		
-		var max = -300 * (itemsCount - 1);
-		index++;
+		var max = -300 * (itemsCount - 1);		
 		if (left < max)
 		{
 			left = max;
-			index = itemsCount - 1;
 		}
 		
 		item.style.marginLeft = left + 'px';
@@ -337,7 +334,8 @@ function GalleryTouchend(event)
 				
 		if (navs)
 		{
-			navs[index].className = 'selectedGalleryButton';
+			var index = Math.abs(left) / 300;
+			navs[index - 1].className = 'selectedGalleryButton';
 		}
 	}
 	else
@@ -345,18 +343,17 @@ function GalleryTouchend(event)
 		var left = item.style.marginLeft.replace("px", "");
 		left = Math.round(left) + 300;
 		
-		index--;
 		if (left > 0)
 		{
-			left = 0;
-			index = 0;
+			left = 0;		
 		}
 		
 		item.style.marginLeft = left + 'px';
 		item.style.transition = '1s';
 		
 		if (navs)
-		{			
+		{	
+			var index = Math.abs(left) / 300;			
 			navs[index].className = 'selectedGalleryButton';
 		}
 	}
