@@ -362,14 +362,14 @@ function GalleryTouchend(event)
 	}
 }
 
-function GalleryClick(index, nav)
+function GalleryClick(idx, nav)
 {
 	if (item)
 	{
-		var itemIndex = index + 1;
-		var left = 300 - (300 * itemIndex);	
-		item.style.transition = '1s';
+		var itemIndex = idx + 1;
+		var left = 300 - (300 * itemIndex);
 		item.style.marginLeft = left + 'px';
+		item.style.transition = '1s';
 		var navs = document.getElementById('galleryButtons').getElementsByTagName('a');
 		resetNavs();
 		nav.className = 'selectedGalleryButton';
