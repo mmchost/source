@@ -323,6 +323,7 @@ function GalleryTouchend(event)
 		var left = item.style.marginLeft.replace("px", "");
 		left = Math.round(left) - 300;
 		
+		var index = Math.abs(left) / 300;
 		var max = -300 * (itemsCount - 1);		
 		if (left < max)
 		{
@@ -334,7 +335,6 @@ function GalleryTouchend(event)
 				
 		if (navs)
 		{
-			var index = Math.abs(left) / 300;
 			navs[index - 1].className = 'selectedGalleryButton';
 		}
 	}
@@ -343,6 +343,7 @@ function GalleryTouchend(event)
 		var left = item.style.marginLeft.replace("px", "");
 		left = Math.round(left) + 300;
 		
+		var index = Math.abs(left) / 300;
 		if (left > 0)
 		{
 			left = 0;		
@@ -352,9 +353,8 @@ function GalleryTouchend(event)
 		item.style.transition = '1s';
 		
 		if (navs)
-		{	
-			var index = Math.abs(left) / 300;			
-			navs[index].className = 'selectedGalleryButton';
+		{				
+			navs[index - 1].className = 'selectedGalleryButton';
 		}
 	}
 }
