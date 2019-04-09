@@ -335,7 +335,7 @@ function GalleryTouchend(event)
 				
 		if (navs)
 		{
-			navs[index - 1].className = 'selectedGalleryButton';
+			navs[index].className = 'selectedGalleryButton';
 		}
 	}
 	else
