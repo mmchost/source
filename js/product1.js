@@ -123,8 +123,8 @@ function InitializePage()
 		
 		var images = product["images"].split(",");
 		
-		var preview = document.getElementById("preview");
-		if (preview)
+		var galleryContainer = document.getElementById("galleryContainer");
+		if (galleryContainer)
 		{
 			var gals = "";
 			for (var k=0; k<images.length; k++)
@@ -138,7 +138,7 @@ function InitializePage()
 					gals += "<img class='gallery'/>";
 				}
 			}
-			preview.innerHTML = gals;
+			galleryContainer.innerHTML = gals;
 		}
 		
 		var galleryButtons = document.getElementById("galleryButtons");
