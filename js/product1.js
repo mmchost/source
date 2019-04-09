@@ -1,5 +1,6 @@
 var product, item, midpoint;
-var index, itemsCount = 0;
+var index = 0;
+var itemsCount = 0;
 
 function LoadSource(productID)
 {
