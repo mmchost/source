@@ -1,8 +1,5 @@
-var product;
-var item;
-var items;
-var midpoint;
-var index = 0;
+var product, item, midpoint;
+var index, itemsCount = 0;
 
 function LoadSource(productID)
 {
@@ -125,6 +122,7 @@ function InitializePage()
 		}
 		
 		var images = product["images"].split(",");
+		itemsCount = images.length;
 		
 		var galleryContainer = document.getElementById("galleryContainer");
 		if (galleryContainer)
@@ -326,12 +324,12 @@ function GalleryTouchend(event)
 		var left = item.style.marginLeft.replace("px", "");
 		left = Math.round(left) - 300;
 		
-		var max = -300 * (items.length - 1);
+		var max = -300 * (itemsCount - 1);
 		index++;
 		if (left < max)
 		{
 			left = max;
-			index = items.length - 1;
+			index = itemsCount - 1;
 		}
 		
 		item.style.marginLeft = left + 'px';
