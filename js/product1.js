@@ -281,45 +281,26 @@ function CalculateTotal(value)
 	product["quantity"] = Math.round(product["quantity"]) + value;
 	RefreshQt(product["quantity"]);
 }
-	
-function PreviewImage(img)
-{
-	var container = document.getElementById("previewImage");
-	if (container)
-	{
-		container.src = "images/" + img.name;
-		
-		var list = document.getElementById("galleryButtons").getElementsByTagName("a");
-		if (list)
-		{
-			for (var i=0; i<list.length; i++)
-			{
-				list[i].className = "galleryButton";
-			}
-			img.className = "selectedGalleryButton";
-		}
-	}
-}
 
 function InitGallery()
 {
-  items = document.querySelectorAll("gallery");
+	items = document.querySelectorAll('gallery');
 	item = document.getElementById('firstItem');
 }
 
 function resetNavs()
-{
-	var navs = document.getElementsByClassName('image-nav-active');
+{	
+	var navs = document.getElementsByClassName('selectedGalleryButton');
 	if (navs)
 	{
 		if (navs.length > 0)
 		{
 			for (var i=0; i<navs.length; i++)
 			{
-				navs[i].className = 'image-nav';
+				navs[i].className = 'galleryButton';
 			}
 		}
-	}
+	}	
 }
 
 function GalleryTouchstart(event)
@@ -331,19 +312,18 @@ function GalleryTouchstart(event)
 function GalleryTouchend(event)
 {
 	var touch = event.targetTouches[0];
-    //var midpoint = 240; //Math.floor(480/2);
-    var px = touch.pageX;
+	var px = touch.pageX;
 	
 	resetNavs();
 	
-	var nvs = document.getElementsByClassName('image-nav');
+	var nvs = document.getElementsByClassName('galleryButton');
 	
 	if (px < midpoint)
 	{
 		var left = item.style.marginLeft.replace("px", "");
-		left = Math.round(left) - 480;
+		left = Math.round(left) - 300;
 		
-		var max = -480 * (items.length - 1);
+		var max = -300 * (items.length - 1);
 		index++;
 		if (left < max)
 		{
@@ -352,17 +332,17 @@ function GalleryTouchend(event)
 		}
 		
 		item.style.marginLeft = left + 'px';
-        item.style.transition = '1s';
+		item.style.transition = '1s';
 				
 		if (nvs)
 		{
-			nvs[index].className = 'image-nav-active';
+			nvs[index].className = 'selectedGalleryButton';
 		}
 	}
 	else
 	{
 		var left = item.style.marginLeft.replace("px", "");
-		left = Math.round(left) + 480;
+		left = Math.round(left) + 300;
 		
 		index--;
 		if (left > 0)
@@ -372,11 +352,11 @@ function GalleryTouchend(event)
 		}
 		
 		item.style.marginLeft = left + 'px';
-        item.style.transition = '1s';
+		item.style.transition = '1s';
 		
 		if (nvs)
 		{			
-			nvs[index].className = 'image-nav-active';
+			nvs[index].className = 'selectedGalleryButton';
 		}
 	}
 }
