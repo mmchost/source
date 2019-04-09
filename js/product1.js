@@ -285,13 +285,12 @@ function CalculateTotal(value)
 
 function InitGallery()
 {
-	items = document.querySelectorAll('gallery');
 	item = document.getElementById('firstItem');
 }
 
 function resetNavs()
 {	
-	var navs = document.getElementsByClassName('selectedGalleryButton');
+	var navs = document.getElementById('galleryButtons').getElementsByTagName('a');
 	if (navs)
 	{
 		if (navs.length > 0)
@@ -317,7 +316,7 @@ function GalleryTouchend(event)
 	
 	resetNavs();
 	
-	var nvs = document.getElementsByClassName('galleryButton');
+	var navs = document.getElementById('galleryButtons').getElementsByTagName('a');
 	
 	if (px < midpoint)
 	{
@@ -335,9 +334,9 @@ function GalleryTouchend(event)
 		item.style.marginLeft = left + 'px';
 		item.style.transition = '1s';
 				
-		if (nvs)
+		if (navs)
 		{
-			nvs[index].className = 'selectedGalleryButton';
+			navs[index].className = 'selectedGalleryButton';
 		}
 	}
 	else
@@ -355,9 +354,9 @@ function GalleryTouchend(event)
 		item.style.marginLeft = left + 'px';
 		item.style.transition = '1s';
 		
-		if (nvs)
+		if (navs)
 		{			
-			nvs[index].className = 'selectedGalleryButton';
+			navs[index].className = 'selectedGalleryButton';
 		}
 	}
 }
