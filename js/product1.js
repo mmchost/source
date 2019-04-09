@@ -151,7 +151,7 @@ function InitializePage()
 			{
 				var current = i+1;
 				var className = i == 0 ? "selectedGalleryButton" : "galleryButton";
-				text += "<a title='" + current + "/" + images.length + "' name='" + images[i] + "' class='" + className + "' onclick='GalleryClick(" + current + ",this)'/>";
+				text += "<a title='" + current + "/" + images.length + "' name='" + images[i] + "' class='" + className + "' onclick='GalleryClick(" + i + ",this)'/>";
 			}
 			galleryButtons.innerHTML = text;
 		}
@@ -366,7 +366,8 @@ function GalleryClick(index, nav)
 {
 	if (item)
 	{
-		var left = 300 - (300 * index);	
+		var itemIndex = index + 1;
+		var left = 300 - (300 * itemIndex);	
 		item.style.transition = '1s';
 		item.style.marginLeft = left + 'px';
 		var navs = document.getElementById('galleryButtons').getElementsByTagName('a');
