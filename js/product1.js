@@ -1,4 +1,7 @@
-var product, item, items, midpoint;
+var product;
+var item;
+var items;
+var midpoint;
 var index = 0;
 
 function LoadSource(productID)
