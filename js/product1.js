@@ -123,10 +123,22 @@ function InitializePage()
 		
 		var images = product["images"].split(",");
 		
-		var previewImage = document.getElementById("previewImage");
-		if (previewImage)
+		var preview = document.getElementById("preview");
+		if (preview)
 		{
-			previewImage.src = "images/" + images[0];
+			var gals = "";
+			for (var k=0; k<images.length; k++)
+			{
+				if (k == 0)
+				{
+					gals += "<img class='gallery' id='firstItem'/>";
+				}
+				else
+				{
+					gals += "<img class='gallery'/>";
+				}
+			}
+			preview.innerHTML = gals;
 		}
 		
 		var galleryButtons = document.getElementById("galleryButtons");
