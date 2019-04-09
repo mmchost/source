@@ -151,7 +151,7 @@ function InitializePage()
 			{
 				var current = i+1;
 				var className = i == 0 ? "selectedGalleryButton" : "galleryButton";
-				text += "<a title='" + current + "/" + images.length + "' name='" + images[i] + "' class='" + className + "' onclick='PreviewImage(this)'/>";
+				text += "<a title='" + current + "/" + images.length + "' name='" + images[i] + "' class='" + className + "' onclick='GalleryClick(" + i + ",this)'/>";
 			}
 			galleryButtons.innerHTML = text;
 		}
@@ -359,5 +359,18 @@ function GalleryTouchend(event)
 		{			
 			navs[index].className = 'selectedGalleryButton';
 		}
+	}
+}
+
+function GalleryClick(index, nav)
+{
+	if (item)
+	{
+		var left = 300 - (300 * index);	
+		item.style.transition = '1s';
+		item.style.marginLeft = left + 'px';
+		var navs = document.getElementById('galleryButtons').getElementsByTagName('a');
+		resetNavs();
+		nav.className = 'selectedGalleryButton';
 	}
 }
