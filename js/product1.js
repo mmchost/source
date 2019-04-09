@@ -131,11 +131,11 @@ function InitializePage()
 			{
 				if (k == 0)
 				{
-					gals += "<img class='gallery' id='firstItem' src='" + images[k] + "'/>";
+					gals += "<img class='gallery' id='firstItem' src='images/" + images[k] + "'/>";
 				}
 				else
 				{
-					gals += "<img class='gallery' src='" + images[k] + "'/>";
+					gals += "<img class='gallery' src='images/" + images[k] + "'/>";
 				}
 			}
 			galleryContainer.innerHTML = gals;
