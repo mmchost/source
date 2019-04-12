@@ -342,7 +342,7 @@ function GalleryTouchend(event)
 			navs[index].className = 'selectedGalleryButton';
 		}
 	}
-	else
+	else if (px > midpoint)
 	{
 		var left = item.style.marginLeft.replace("px", "");
 		left = Math.round(left) + 300;
@@ -364,6 +364,11 @@ function GalleryTouchend(event)
 }
 function GalleryMouseup(event)
 {
+	if (event.button != 0)
+	{
+		return;
+	}
+	
 	var px = event.clientX;
 	
 	resetNavs();
@@ -390,7 +395,7 @@ function GalleryMouseup(event)
 			navs[index].className = 'selectedGalleryButton';
 		}
 	}
-	else
+	else if (px > midpoint)
 	{
 		var left = item.style.marginLeft.replace("px", "");
 		left = Math.round(left) + 300;
