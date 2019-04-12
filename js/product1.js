@@ -318,7 +318,10 @@ function GalleryTouchend(event)
 	var touch = event.targetTouches[0];
 	var px = touch.pageX;
 	
-	resetNavs();
+	if (px !== midpoint)
+	{
+		resetNavs();
+	}
 	
 	var navs = document.getElementById('galleryButtons').getElementsByTagName('a');
 	
@@ -367,8 +370,11 @@ function GalleryMouseup(event)
 	if (event.button == 0)
 	{
 		var px = event.clientX;
-	
-		resetNavs();
+		
+		if (px !== midpoint)
+		{
+			resetNavs();
+		}
 
 		var navs = document.getElementById('galleryButtons').getElementsByTagName('a');
 
