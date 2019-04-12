@@ -364,54 +364,52 @@ function GalleryTouchend(event)
 }
 function GalleryMouseup(event)
 {
-	if (event.button != 0)
+	if (event.button == 0)
 	{
-		return;
-	}
+		var px = event.clientX;
 	
-	var px = event.clientX;
-	
-	resetNavs();
-	
-	var navs = document.getElementById('galleryButtons').getElementsByTagName('a');
-	
-	if (px < midpoint)
-	{
-		var left = item.style.marginLeft.replace("px", "");
-		left = Math.round(left) - 300;
-		
-		var max = -300 * (itemsCount - 1);		
-		if (left < max)
+		resetNavs();
+
+		var navs = document.getElementById('galleryButtons').getElementsByTagName('a');
+
+		if (px < midpoint)
 		{
-			left = max;
+			var left = item.style.marginLeft.replace("px", "");
+			left = Math.round(left) - 300;
+
+			var max = -300 * (itemsCount - 1);
+			if (left < max)
+			{
+				left = max;
+			}
+
+			item.style.marginLeft = left + 'px';
+			item.style.transition = '1s';
+
+			if (navs)
+			{
+				var index = Math.abs(left) / 300;
+				navs[index].className = 'selectedGalleryButton';
+			}
 		}
-		
-		item.style.marginLeft = left + 'px';
-		item.style.transition = '1s';
-				
-		if (navs)
+		else if (px > midpoint)
 		{
-			var index = Math.abs(left) / 300;
-			navs[index].className = 'selectedGalleryButton';
-		}
-	}
-	else if (px > midpoint)
-	{
-		var left = item.style.marginLeft.replace("px", "");
-		left = Math.round(left) + 300;
-		
-		if (left > 0)
-		{
-			left = 0;		
-		}
-		
-		item.style.marginLeft = left + 'px';
-		item.style.transition = '1s';
-		
-		if (navs)
-		{
-			var index = Math.abs(left) / 300;
-			navs[index].className = 'selectedGalleryButton';
+			var left = item.style.marginLeft.replace("px", "");
+			left = Math.round(left) + 300;
+
+			if (left > 0)
+			{
+				left = 0;
+			}
+
+			item.style.marginLeft = left + 'px';
+			item.style.transition = '1s';
+
+			if (navs)
+			{
+				var index = Math.abs(left) / 300;
+				navs[index].className = 'selectedGalleryButton';
+			}
 		}
 	}
 }
