@@ -308,11 +308,63 @@ function GalleryTouchstart(event)
 	var touch = event.targetTouches[0];
 	midpoint = touch.pageX;
 }
+function GalleryMousedown(event)
+{
+	midpoint = event.clientX;
+}
 
 function GalleryTouchend(event)
 {
 	var touch = event.targetTouches[0];
 	var px = touch.pageX;
+	
+	resetNavs();
+	
+	var navs = document.getElementById('galleryButtons').getElementsByTagName('a');
+	
+	if (px < midpoint)
+	{
+		var left = item.style.marginLeft.replace("px", "");
+		left = Math.round(left) - 300;
+		
+		var max = -300 * (itemsCount - 1);		
+		if (left < max)
+		{
+			left = max;
+		}
+		
+		item.style.marginLeft = left + 'px';
+		item.style.transition = '1s';
+				
+		if (navs)
+		{
+			var index = Math.abs(left) / 300;
+			navs[index].className = 'selectedGalleryButton';
+		}
+	}
+	else
+	{
+		var left = item.style.marginLeft.replace("px", "");
+		left = Math.round(left) + 300;
+		
+		if (left > 0)
+		{
+			left = 0;		
+		}
+		
+		item.style.marginLeft = left + 'px';
+		item.style.transition = '1s';
+		
+		if (navs)
+		{
+			var index = Math.abs(left) / 300;
+			navs[index].className = 'selectedGalleryButton';
+		}
+	}
+}
+function GalleryMouseup(event)
+{
+	var px = event.clientX;
 	
 	resetNavs();
 	
