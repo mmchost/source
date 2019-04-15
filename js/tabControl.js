@@ -24,7 +24,7 @@ function TabSelectionChanged(item)
 {
 	if (item)
 	{
-		var itemContainer = document.getElementById('tabItemsContainer').getElementsByTagName('div');
+		var itemContainer = document.getElementById('tabItemsContainer').getElementsByTagName('span');
 		CloseTabItems(itemContainer);
 		
 		item.className = 'tab tab-selected';
@@ -42,7 +42,7 @@ function TabSelectionChanged(item)
 			}
 		}
 		
-		var contentContainer = document.getElementById('tabContentContainer').getElementsByTagName('div');
+		var contentContainer = document.getElementById('tabContentContainer').getElementsByTagName('span');
 		CloseTabContents(contentContainer);
 		if (contentContainer)
 		{
