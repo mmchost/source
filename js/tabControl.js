@@ -25,7 +25,7 @@ function TabSelectionChanged(item)
 	if (item)
 	{
 		var itemContainer = document.getElementById('tabItemsContainer').getElementsByTagName('div');
-		ClearSelections(itemContainer);
+		CloseTabItems(itemContainer);
 		
 		item.className = 'tab selected';
 		
@@ -43,7 +43,7 @@ function TabSelectionChanged(item)
 		}
 		
 		var contentContainer = document.getElementById('tabContentContainer').getElementsByTagName('div');
-		CloseTabs(contentContainer);
+		CloseTabContents(contentContainer);
 		if (contentContainer)
 		{
 			contentContainer[index].style.display = 'block';
