@@ -27,14 +27,14 @@ function TabSelectionChanged(item)
 		var itemContainer = document.getElementById('tabItemsContainer').getElementsByTagName('div');
 		CloseTabItems(itemContainer);
 		
-		item.className = 'tab selected';
+		item.className = 'tab tab-selected';
 		
 		var index = 0;		
 		if (itemContainer)
 		{
 			for (var i=0; i<itemContainer.length; i++)
 			{
-				if (itemContainer[i].className === 'tab selected')
+				if (itemContainer[i].className === 'tab tab-selected')
 				{
 					index = i;
 					break;
