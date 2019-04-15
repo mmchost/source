@@ -11,16 +11,12 @@
 .tab-selected
 {
 	background:#fff;
-	transition:.5s;
-	//cursor:initial;
+	transition:.5s;	
 }
 
 .tab-content
 {
-	display:none;
-	border-style:solid;
-	border-color:magenta;
-	border-width:1px;
+	display:none;	
 	margin:10px;
 	min-height:300px;
 }
