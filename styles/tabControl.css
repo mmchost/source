@@ -1,0 +1,26 @@
+.tab
+{
+	display:inline-block;
+	width:148px;
+	height:48px;
+	cursor:pointer;
+	vertical-align:middle;
+	line-height:48px;
+}
+
+.tab-selected
+{
+	background:#fff;
+	transition:.5s;
+	//cursor:initial;
+}
+
+.tab-content
+{
+	display:none;
+	border-style:solid;
+	border-color:magenta;
+	border-width:1px;
+	margin:10px;
+	min-height:300px;
+}
