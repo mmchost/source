@@ -85,14 +85,14 @@
 	}
 }
 
-@media screen and (max-width:640px)
+@media screen and (max-width:700px)
 {
 	.searchbox
 	{
 		max-width:250px;
 		min-width:250px;
-	}
-
+	}	
+	
 	.textarea
 	{
 		min-width:250px;
