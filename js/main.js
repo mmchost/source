@@ -120,7 +120,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 	var servicesMenu = "<a href='" + root + "#exams'>SERVICII</a>";
 	var cartMenu = "";
 	var appLogo = "<a href='https://www.mediosmedical.ro' style='display:block;'><img class='header-logo' src='" + imagesPath + "logo.png' alt='Medios Medical Center'/></a>";
-	var resxMenu = "<td class='menu-item'><a href='fordoctors'><span class='menu-item-newline'>PENTRU</span><br/>MEDICI</a></td>";
+	var resxMenu = "<td class='menu-item'><a href='fordoctors'><span class='menu-item-newline'>PENTRU</span>MEDICI</a></td>";
 	
 	if (isMainPage == true)
 	{
