@@ -177,6 +177,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 				"<td class='menu-item'>" +
 				storeMenu.replace("{0}", storeString.toUpperCase()) +
 				"</td>" +
+				resxMenu +
 				"<td class='menu-item'>" +
 				"<a href='#contact'>CONTACT</a>" +
 				"</td>" +
