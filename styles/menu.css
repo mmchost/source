@@ -50,6 +50,12 @@
 }
 */
 
+.menu-item-newline
+{
+	font-size:11px;
+	line-height:17px;
+}
+
 .cartMenuText
 {
 }
@@ -89,7 +95,13 @@
 	{
 		width:0px;
 		height:32px;
-	} 
+	}
+	
+	.menu-item-newline
+	{
+		font-size:9px;
+		line-height:7px;
+	}
 }
 
 @media screen and (max-width:320px)
