@@ -49,6 +49,6 @@
 {
 	.inputContainer
 	{
-		display:block;
+		display:table;
 	}
 }
