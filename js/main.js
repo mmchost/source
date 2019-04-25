@@ -300,7 +300,7 @@ function InitializeComponent(isStore, addCart, imagesPath, isMainPage, root)
 		"<td class='logo-footer'></td>" +
 		"<td>" +
 		"<table cellpadding=\"0\" cellspacing=\"0\" style=\"display:inline-table;\">" +
-		"<tr><td class=\"footer-menu\">" + homeMenu.replace("{0}", "Acasa") + "</td>" +
+		"<tr><td class=\"footer-menu\">" + homeMenu.replace("{0}", "Acasă") + "</td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +		
 		"<td class=\"footer-menu\"><a href=\"https://www.mediosmedical.ro/#exams\">Servicii</a></td>" +
 		"<td style=\"vertical-align:middle;\"><a class=\"footer-separator\"></a></td>" +
