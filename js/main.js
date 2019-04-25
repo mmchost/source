@@ -352,12 +352,12 @@ function InitializeInfoBar(imagesPath)
 		"<td class=\"info-bar-container\">" +
 		"<div class=\"info-bar-content\">" +
 		"<a title=\"" + 
-		"TBA" + 
+		"Program de lucru pentru perioada 26.04.2019 - 29.04.2019 : Închis" + 
 		"\">" + 
-		"TBA" + "<br/>" +
-		"TBA" + "<br/>" +
-		"TBA" + "<br/>" +
-		"TBA" +
+		"Program de lucru pentru perioada 26.04.2019 - 29.04.2019 : Închis" + //"<br/>" +
+		//"TBA" + "<br/>" +
+		//"TBA" + "<br/>" +
+		//"TBA" +
 		"</a>" +
 		"</div>" +
 		"</td>" +
