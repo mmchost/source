@@ -352,11 +352,11 @@ function InitializeInfoBar(imagesPath)
 		"<td class=\"info-bar-container\">" +
 		"<div class=\"info-bar-content\">" +
 		"<a title=\"" + 
-		"Program de lucru pentru perioada 26.04.2019 - 29.04.2019 : Închis" + 
+		"Program de lucru pentru perioada 30.04.2019 - 01.05.2019" + 
 		"\">" + 
-		"Program de lucru pentru perioada 26.04.2019 - 29.04.2019 : Închis" + //"<br/>" +
-		//"TBA" + "<br/>" +
-		//"TBA" + "<br/>" +
+		"Program de lucru pentru perioada 30.04.2019 - 01.05.2019" + "<br/>" +
+		"30.04.2019 : 08:30 - 16:00" + "<br/>" +
+		"01.05.2019 : Închis" + //"<br/>" +
 		//"TBA" +
 		"</a>" +
 		"</div>" +
