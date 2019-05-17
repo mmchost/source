@@ -121,6 +121,7 @@ function InitializePage()
 			detailsProductId.innerHTML = product["id"];
 		}
 		
+		/*
 		var images = product["images"].split(",");
 		itemsCount = images.length;
 		
@@ -154,6 +155,7 @@ function InitializePage()
 			}
 			galleryButtons.innerHTML = text;
 		}
+		*/
 		
 		var buttonState = product["available"] == "true" ? "class='button-default'" : "class='button-default-disabled' disabled='true'";
 		var buttonText = Math.round(product["price"]) > 0 ? "Adaugă în coș" : "Solicită oferta";
