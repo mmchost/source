@@ -1,5 +1,5 @@
 var product, item, midpoint;
-var itemsCount = 0;
+//var itemsCount = 0;
 
 function LoadSource(productID)
 {
@@ -315,7 +315,7 @@ function GalleryMousedown(event)
 	midpoint = event.clientX;
 }
 
-function GalleryTouchend(event)
+function GalleryTouchend(event, itemsCount)
 {
 	var touch = event.targetTouches[0];
 	var px = touch.pageX;
@@ -367,7 +367,7 @@ function GalleryTouchend(event)
 		}
 	}
 }
-function GalleryMouseup(event)
+function GalleryMouseup(event, itemsCount)
 {
 	if (event.button == 0)
 	{
