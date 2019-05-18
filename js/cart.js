@@ -32,7 +32,12 @@ function RefreshCart(list)
 				cell.style.verticalAlign = "top";				
 				
 				var detailsLink = "<a class='hyperlink-default' href='" + list[i]['page'] + "'>";
-				var itemImage = "product/images/" + list[i]["images"].split(",")[0];
+				var itemImage = "";
+				try
+				{
+					itemImage = "product/images/" + list[i]["images"].split(",")[0];
+				}
+				catch(ex){}
 				if (itemImage == null)
 				{
 					itemImage = "product/images/" + list[i]["image"];
