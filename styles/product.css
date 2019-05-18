@@ -148,6 +148,14 @@
 	overflow:hidden;
 }
 
+.galleryTooltip
+{
+	background:#fff;
+	width:859px;
+	position:absolute;
+	display:none;
+}
+
 @media screen and (max-width:1200px)
 {
 	.price
@@ -173,6 +181,10 @@
 		max-width:100%;
 		width:100%;
 		border-width:0px 0px 0px 1px;
+	}
+	.galleryTooltip
+	{
+		width:0px;
 	}
 }
 
