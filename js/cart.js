@@ -38,7 +38,7 @@ function RefreshCart(list)
 					itemImage = "product/images/" + list[i]["images"].split(",")[0];
 				}
 				catch(ex){}
-				if (itemImage == null)
+				if (itemImage.length == 0)
 				{
 					itemImage = "product/images/" + list[i]["image"];
 				}
