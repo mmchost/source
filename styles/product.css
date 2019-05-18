@@ -11,14 +11,6 @@
 	border:solid 1px #e6e6e6;
 }
 
-.preview
-{
-	display:inline-block;
-	vertical-align:top;
-	width:300px;
-	/*border:solid 1px blue;*/
-}
-	
 .preview-container
 {
 	width:1px;
@@ -131,6 +123,29 @@
 	cursor:pointer;
 	margin:5px;
 	transition:1s;
+}
+
+.gallery
+{
+  	width:300px;
+  	height:300px;
+  	pointer-events:none;
+	display:inline-block;
+	margin-left:0px;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+	
+.preview
+{
+	display:inline-block;
+	vertical-align:top;
+	width:300px;
+	white-space:nowrap;
+	overflow:hidden;
 }
 
 @media screen and (max-width:1200px)
