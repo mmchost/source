@@ -33,6 +33,10 @@ function RefreshCart(list)
 				
 				var detailsLink = "<a class='hyperlink-default' href='" + list[i]['page'] + "'>";
 				var itemImage = "product/images/" + list[i]["images"].split(",")[0];
+				if (itemImage == null)
+				{
+					itemImage = "product/images/" + list[i]["image"];
+				}
 				cell.innerHTML = "<table width=\"100%\" cellpadding=\"0\" cellspacing=\"0\">" + 
 								 "<tr>" + 
 								 "<td>" + detailsLink + "<div style=\"background:transparent; width:80px; height:80px; position:absolute;\"></div><img style=\"border-style:none;\" src=\"" + itemImage + "\" width=\"80px\"/></a></td>" +
