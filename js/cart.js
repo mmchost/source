@@ -113,7 +113,7 @@ function CalculateGrandTotal()
 		for (i=0; i<cart.length; i++)
 		{
 			total += cart[i]["quantity"] * cart[i]["price"];
-			quantityCount += cart[i]["quantity"];
+			quantityCount += Math.round(cart[i]["quantity"]);
 		}
 		
 		var articlesCell = document.getElementById("articlesCell");
