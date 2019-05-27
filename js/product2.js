@@ -518,11 +518,11 @@ function InitSimilarProducts(list)
 			var spContainer = document.getElementById('spContainer');
 			if (spContainer)
 			{
-				var cellValue;
+				var cellValue = "";
 				for (var i=0; i<list.length; i++)
 				{
 					var itemName = list[i]["name"].replace(/\n/g, '<br/>');
-					var itemImage = "product/images/" + list[i]["image"]; //list[i]["images"].split(",")[0];			    
+					var itemImage = "images/" + list[i]["image"]; //list[i]["images"].split(",")[0];			    
 					var iconColor = list[i]["available"] == "true" ? "#0066A2" : "#B7B7B7";
 					var link = list[i]["page"]; // + param;
 					var imageLink = "<a style='outline:none; display:block; width:100%; height:100%;' href='" + link + "'>";
