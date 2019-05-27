@@ -105,6 +105,13 @@ function GetSimilarItems(elements)
   {
     var similarIds = product["similarItems"].split(",");
   
+	   /*
+        if (item["similarItems"].indexOf(similarIds[k]) !== -1)
+        {
+          similarItems.push(item);
+        }
+	*/
+	  
     //for (var k=0; k<similarIds.length; k++)
     //{
       for (var i=0; i<elements.length; i++)
@@ -117,19 +124,12 @@ function GetSimilarItems(elements)
           {
             item[node.nodeName] = node.text || node.textContent;
           }
-        }
-	      /*
-        if (item["similarItems"].indexOf(similarIds[k]) !== -1)
-        {
-          similarItems.push(item);
-        }
-	*/
-	      if (item["similarItems"].some(id => similarIds.indexOf(id) >= 0)
-		  {
-		  	similarItems.push(item);
-		  }
+        }	
+	if (item["similarItems"].split(",").some(id => similarIds.indexOf(id) >= 0)
+	{
+	    similarItems.push(item);
+	}
       }
-    //}
   }
 }
 	
