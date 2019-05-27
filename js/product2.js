@@ -527,7 +527,7 @@ function InitSimilarProducts(list)
 					var link = list[i]["page"]; // + param;
 					var imageLink = "<a style='outline:none; display:block; width:100%; height:100%;' href='" + link + "'>";
 					var nameLink = "<a class='hyperlink-default' href='" + link + "'>";
-					var priceCell = Math.round(list[i]["price"]) > 0 ? "<tr><td align='center' class='item-price-cell'>" + list[i]["price"] + " Lei<a style='font-size:12px; color:#484848; font-weight:300;'>&nbsp;&nbsp;*TVA inclus</a></td></tr>" : "<tr><td align='center' class='item-price-cell'></td></tr>";
+					var priceCell = Math.round(list[i]["price"]) > 0 ? "<tr><td align='center' class='item-price-cell' style='padding-bottom:10px;'>" + list[i]["price"] + " Lei<a style='font-size:12px; color:#484848; font-weight:300;'>&nbsp;&nbsp;*TVA inclus</a></td></tr>" : "<tr><td align='center' class='item-price-cell' style='padding-bottom:10px;'></td></tr>";
 					
 					cellValue +=
 						" <table cellpadding='0' cellspacing='0' class='item-table'>" +
