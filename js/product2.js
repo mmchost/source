@@ -117,17 +117,15 @@ function GetSimilarItems(elements)
 				}
 			}	
 			
-			var itemSimilarIds = item["similarItems"].split(",");
-			var pid = product["id"];
-			if (itemSimilarIds.length > 0)
+			if (item["id"] !== product["id"])
 			{
-				const notThis = itemSimilarIds.indexOf(pid) == -1;
-				if (notThis)
+				var itemSimilarIds = item["similarItems"].split(",");
+				if (itemSimilarIds.length > 0)
 				{
 					const found = itemSimilarIds.some(id=> similarIds.indexOf(id) >= 0);
 					if (found)
 					{
-					    similarItems.push(item);
+						similarItems.push(item);
 					}
 				}
 			}
