@@ -118,9 +118,11 @@ function GetSimilarItems(elements)
 			}	
 			
 			var itemSimilarIds = item["similarItems"].split(",");
+			var pid = product["id"];
 			if (itemSimilarIds.length > 0)
 			{
-				if (itemSimilarIds.indexOf(product["id"]) == -1)
+				const notThis = itemSimilarIds.indexOf(pid) == -1;
+				if (notThis)
 				{
 					const found = itemSimilarIds.some(id=> similarIds.indexOf(id) >= 0);
 					if (found)
@@ -511,32 +513,33 @@ function GalleryMouseout()
 
 function InitSimilarProducts(list)
 {
-  if (product)
-  {
-    if (list.length > 0)
-    {
-      var spContainer = document.getElementById('spContainer');
-      if (spContainer)
-      {
-        var cellValue;
-        for (var i=0; i<list.length; i++)
-        {
-          var itemName = list[i]["name"].replace(/\n/g, '<br/>');
-          var itemImage = "product/images/" + list[i]["image"]; //list[i]["images"].split(",")[0];			    
-			    var iconColor = list[i]["available"] == "true" ? "#0066A2" : "#B7B7B7";
-			    var link = list[i]["page"]; // + param;
-			    var imageLink = "<a style='outline:none; display:block; width:100%; height:100%;' href='" + link + "'>";
-			    var nameLink = "<a class='hyperlink-default' href='" + link + "'>";
-			    var priceCell = Math.round(list[i]["price"]) > 0 ? "<tr><td align='center' class='item-price-cell'>" + list[i]["price"] + " Lei<a style='font-size:12px; color:#484848; font-weight:300;'>&nbsp;&nbsp;*TVA inclus</a></td></tr>" : "<tr><td align='center' class='item-price-cell'></td></tr>";
-			    cellValue +=
-          " <table cellpadding='0' cellspacing='0' class='item-table'>" +
-          "<tr><td align='center' class='item-image-cell'>" + imageLink + "<img class='item-image' src='" + itemImage + "'/></a></td></tr>" +
-          "<tr><td align='center' class='item-name-cell'>" + nameLink + itemName + "</a></td></tr>" +          
-          priceCell +
-          "</table>";  
-        }
-	spContainer.innerHTML = cellValue;
-      }
-    }
-  }
+	if (product)
+	{
+		if (list.length > 0)
+		{
+			var spContainer = document.getElementById('spContainer');
+			if (spContainer)
+			{
+				var cellValue;
+				for (var i=0; i<list.length; i++)
+				{
+					var itemName = list[i]["name"].replace(/\n/g, '<br/>');
+					var itemImage = "product/images/" + list[i]["image"]; //list[i]["images"].split(",")[0];			    
+					var iconColor = list[i]["available"] == "true" ? "#0066A2" : "#B7B7B7";
+					var link = list[i]["page"]; // + param;
+					var imageLink = "<a style='outline:none; display:block; width:100%; height:100%;' href='" + link + "'>";
+					var nameLink = "<a class='hyperlink-default' href='" + link + "'>";
+					var priceCell = Math.round(list[i]["price"]) > 0 ? "<tr><td align='center' class='item-price-cell'>" + list[i]["price"] + " Lei<a style='font-size:12px; color:#484848; font-weight:300;'>&nbsp;&nbsp;*TVA inclus</a></td></tr>" : "<tr><td align='center' class='item-price-cell'></td></tr>";
+					
+					cellValue +=
+						" <table cellpadding='0' cellspacing='0' class='item-table'>" +
+						"<tr><td align='center' class='item-image-cell'>" + imageLink + "<img class='item-image' src='" + itemImage + "'/></a></td></tr>" +
+						"<tr><td align='center' class='item-name-cell'>" + nameLink + itemName + "</a></td></tr>" +          
+						priceCell +
+						"</table>";  
+				}
+				spContainer.innerHTML = cellValue;
+			}
+		}
+	}
 }
