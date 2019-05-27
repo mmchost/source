@@ -122,7 +122,8 @@ function GetSimilarItems(elements)
 			{
 				if (itemSimilarIds.indexOf(product["id"]) == -1)
 				{
-					if (itemSimilarIds.some(id => similarIds.indexOf(id) >= 0)
+					const found = itemSimilarIds.some(id=> similarIds.indexOf(id) >= 0);
+					if (found)
 					{
 					    similarItems.push(item);
 					}
