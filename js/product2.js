@@ -1,4 +1,5 @@
-var product, similarItems, item, midpoint;
+var product, item, midpoint;
+var similarItems = [];
 //var itemsCount = 0;
 
 function LoadSource(productID)
