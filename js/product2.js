@@ -105,8 +105,8 @@ function GetSimilarItems(elements)
   {
     var similarIds = product["similarItems"].split(",");
   
-    for (var k=0; k<similarIds.length; k++)
-    {
+    //for (var k=0; k<similarIds.length; k++)
+    //{
       for (var i=0; i<elements.length; i++)
       {
         var item = {};
@@ -118,12 +118,18 @@ function GetSimilarItems(elements)
             item[node.nodeName] = node.text || node.textContent;
           }
         }
-        if (item["similarItems"] === similarIds[k])
+	      /*
+        if (item["similarItems"].indexOf(similarIds[k]) !== -1)
         {
-          similarItems.push(item);          
+          similarItems.push(item);
         }
+	*/
+	      if (item["similarItems"].some(id => similarIds.indexOf(id) >= 0)
+		  {
+		  	similarItems.push(item);
+		  }
       }
-    }
+    //}
   }
 }
 	
