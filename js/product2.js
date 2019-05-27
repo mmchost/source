@@ -528,6 +528,7 @@ function InitSimilarProducts(list)
           priceCell +
           "</table>";  
         }
+	spContainer.innerHTML = cellValue;
       }
     }
   }
