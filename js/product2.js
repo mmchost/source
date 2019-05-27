@@ -101,36 +101,35 @@ function ReadProduct(xml, productID)
 
 function GetSimilarItems(elements)
 {
-  if (product)
-  {
-    var similarIds = product["similarItems"].split(",");
-  
-	   /*
-        if (item["similarItems"].indexOf(similarIds[k]) !== -1)
-        {
-          similarItems.push(item);
-        }
-	*/
-	  
-    //for (var k=0; k<similarIds.length; k++)
-    //{
-      for (var i=0; i<elements.length; i++)
-      {
-        var item = {};
-        for (var j=0; j<elements[i].childNodes.length; j++)
-        {
-          var node = elements[i].childNodes[j];
-          if (node.nodeType == 1) // or nodeType == Node.ELEMENT_NODE
-          {
-            item[node.nodeName] = node.text || node.textContent;
-          }
-        }	
-	if (item["similarItems"].split(",").some(id => similarIds.indexOf(id) >= 0)
+	if (product)
 	{
-	    similarItems.push(item);
+		var similarIds = product["similarItems"].split(",");
+		
+		for (var i=0; i<elements.length; i++)
+		{
+			var item = {};
+			for (var j=0; j<elements[i].childNodes.length; j++)
+			{
+				var node = elements[i].childNodes[j];
+				if (node.nodeType == 1) // or nodeType == Node.ELEMENT_NODE
+				{
+					item[node.nodeName] = node.text || node.textContent;
+				}
+			}	
+			
+			var itemSimilarIds = item["similarItems"].split(",");
+			if (itemSimilarIds.length > 0)
+			{
+				if (itemSimilarIds.indexOf(product["id"]) == -1)
+				{
+					if (itemSimilarIds.some(id => similarIds.indexOf(id) >= 0)
+					{
+					    similarItems.push(item);
+					}
+				}
+			}
+		}
 	}
-      }
-  }
 }
 	
 function InitializePage()
