@@ -131,10 +131,13 @@ function GetSimilarItems(elements)
 				}
 				*/
 				
-				const found = $.inArray(item["id"], similarIds); //similarIds.indexOf(item["id"]) >= 0;
-				if (found)
+				//const found = $.inArray(item["id"], similarIds); //similarIds.indexOf(item["id"]) >= 0;
+				for (var j=0; j<similarIds.length; j++)
 				{
-					similarItems.push(item);
+					if (item["id"] === similarIds[j])
+					{
+						similarItems.push(item);
+					}
 				}
 			}
 		}
