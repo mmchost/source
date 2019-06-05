@@ -122,7 +122,7 @@ function GetSimilarItems(elements)
 				var itemSimilarIds = item["similarItems"].split(",");
 				if (itemSimilarIds.length > 0)
 				{
-					const found = itemSimilarIds.some(id=> similarIds.indexOf(id) >= 0);
+					const found = itemSimilarIds.some(id=> similarIds.indexOf(i) >= 0);
 					if (found)
 					{
 						similarItems.push(item);
