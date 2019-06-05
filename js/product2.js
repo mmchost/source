@@ -131,7 +131,7 @@ function GetSimilarItems(elements)
 				}
 				*/
 				
-				const found = jQuery.inArray(item["id"], similarIds); //similarIds.indexOf(item["id"]) >= 0;
+				const found = $.inArray(item["id"], similarIds); //similarIds.indexOf(item["id"]) >= 0;
 				if (found)
 				{
 					similarItems.push(item);
