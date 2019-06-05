@@ -131,13 +131,13 @@ function GetSimilarItems(elements)
 				}
 				*/
 				
-				/*
-				const found = similarIds.some(id=> id === item["id"]);
+				
+				const found = similarIds.indexOf(item["id"]) >= 0;
 				if (found)
 				{
 					similarItems.push(item);
 				}
-				*/
+				
 			}
 		}
 	}
