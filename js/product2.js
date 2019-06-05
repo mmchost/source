@@ -130,11 +130,14 @@ function GetSimilarItems(elements)
 					}
 				}
 				*/
+				
+				/*
 				const found = similarIds.some(id=> id === item["id"]);
 				if (found)
 				{
 					similarItems.push(item);
 				}
+				*/
 			}
 		}
 	}
